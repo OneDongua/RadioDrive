@@ -85,8 +85,6 @@ public class FragmentPlayerFull extends Fragment {
 
     private BroadcastReceiver updateUIReceiver;
 
-    private boolean initialized = false;
-
     private RefreshHandler refreshHandler = new RefreshHandler();
     private TimedUpdateTask timedUpdateTask = new TimedUpdateTask(this);
     private static final int TIMED_UPDATE_INTERVAL = 1000; // 1 second
@@ -160,14 +158,10 @@ public class FragmentPlayerFull extends Fragment {
             @Override
             public void onReceive(Context context, Intent intent) {
                 switch (intent.getAction()) {
-//                    case PlayerService.PLAYER_SERVICE_TIMER_UPDATE: {
-//                        timerUpdate();
-//                    }
-                    case PlayerService.PLAYER_SERVICE_STATE_CHANGE: {
-
-                    }
+                    case PlayerService.PLAYER_SERVICE_STATE_CHANGE:
                     case PlayerService.PLAYER_SERVICE_META_UPDATE: {
                         fullUpdate();
+                        break;
                     }
                 }
             }
@@ -293,9 +287,7 @@ public class FragmentPlayerFull extends Fragment {
     }
 
     public void init() {
-        if (!initialized) {
-            fullUpdate();
-        }
+        fullUpdate();
     }
 
     @Override
@@ -387,7 +379,7 @@ public class FragmentPlayerFull extends Fragment {
     }
 
     private void startUpdating() {
-        if (!isVisible()) {
+        if (!isAdded() || getView() == null) {
             return;
         }
 
@@ -494,8 +486,6 @@ public class FragmentPlayerFull extends Fragment {
         updateFavouriteButton();
 
         timedUpdateTask.run();
-
-        initialized = true;
     }
 
     private void updatePlaybackButtons(boolean playing, boolean recording) {
