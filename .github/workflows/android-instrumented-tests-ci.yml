@@ -54,4 +54,4 @@ jobs:
           force-avd-creation: false
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
-          script: /Users/runner/Library/Android/sdk/platform-tools/adb uninstall net.programmierecke.radiodroid2.test; ./gradlew ${{ matrix.api-level < 26 && 'connectedFreeDebugAndroidTest' ||  matrix.api-level > 29 && 'installPlayDebugAndroidTest' || 'connectedCheck' }}
+          script: /Users/runner/Library/Android/sdk/platform-tools/adb uninstall com.onedongua.radiodrive.test; ./gradlew ${{ matrix.api-level < 26 && 'connectedFreeDebugAndroidTest' ||  matrix.api-level > 29 && 'installPlayDebugAndroidTest' || 'connectedCheck' }}

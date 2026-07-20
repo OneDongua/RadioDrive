@@ -1,1 +1,1 @@
--keep class net.programmierecke.radiodroid2.tests.** { *; }
+-keep class com.onedongua.radiodrive.tests.** { *; }
