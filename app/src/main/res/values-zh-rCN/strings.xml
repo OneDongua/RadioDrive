@@ -349,5 +349,5 @@
     <string name="settings_data_source">数据源</string>
     <string name="settings_data_source_title">选择数据源</string>
     <string name="action_featured">热播</string>
-    <string name="action_regions">省份</string>
+    <string name="action_regions">地区</string>
 </resources>
