@@ -300,6 +300,7 @@
     <string name="settings_disable_battery_optimization">电池优化</string>
     <string name="settings_ignore_battery_optimization_summary_on">电池优化被忽略，睿驾会始终在失去焦点后重获焦点。</string>
     <string name="settings_ignore_battery_optimization_summary_off">电池优化被激活，睿驾将无法在后台失去焦点后重获焦点。</string>
+    <string name="action_qingting_categories">分类</string>
     <string name="settings_other">其它</string>
     <string name="settings_statistics">统计</string>
     <string name="settings_about">关于睿驾 (RadioDrive)</string>
@@ -345,4 +346,8 @@
     <string name="context_menu_add_alarm">@string/action_alarm</string>
     <string name="context_menu_create_shortcut">@string/detail_create_shortcut</string>
     <string name="context_menu_delete">@string/action_delete</string>
+    <string name="settings_data_source">数据源</string>
+    <string name="settings_data_source_title">选择数据源</string>
+    <string name="action_featured">特色</string>
+    <string name="action_regions">省份</string>
 </resources>

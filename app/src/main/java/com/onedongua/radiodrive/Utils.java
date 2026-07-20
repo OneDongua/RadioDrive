@@ -229,6 +229,19 @@ public class Utils {
 
     public static String getRealStationLink(OkHttpClient httpClient, Context ctx, String stationId) {
         Log.i("UTIL", "StationUUID:" + stationId);
+        // 检查是否为蜻蜓FM电台 (UUID为纯数字)
+        if (stationId != null && stationId.matches("\\d+")) {
+            try {
+                com.onedongua.radiodrive.source.RadioDataSourceManager mgr =
+                        com.onedongua.radiodrive.source.RadioDataSourceManager.getInstance();
+                if ("qingting".equals(mgr.getCurrentSource().getSourceType())) {
+                    // 蜻蜓FM播放URL，无需签名参数
+                    return com.onedongua.radiodrive.source.qingting.QingtingModels.PLAY_URL_PREFIX
+                            + stationId + com.onedongua.radiodrive.source.qingting.QingtingModels.PLAY_URL_SUFFIX;
+                }
+            } catch (Exception ignored) {
+            }
+        }
         String result = Utils.downloadFeedRelative(httpClient, ctx, "json/url/" + stationId, true, null);
         if (result != null) {
             Log.i("UTIL", result);

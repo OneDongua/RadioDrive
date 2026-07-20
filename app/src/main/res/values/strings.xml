@@ -306,6 +306,13 @@
     <string name="settings_ignore_battery_optimization_summary_on">Battery optimization is ignored, RadioDrive should always be able to re-gain focus after focus loss.</string>
     <string name="settings_ignore_battery_optimization_summary_off">Battery optimization is activated, RadioDrive will not be able to re-gain focus after focus loss if in background.</string>
     <string name="key_ignore_battery_optimization">ignore_battery_optimization</string>
+    <string name="settings_data_source">Data source</string>
+    <string name="settings_data_source_title">Select radio data source</string>
+
+    <string name="action_featured">Featured</string>
+    <string name="action_regions">Regions</string>
+    <string name="action_qingting_categories">Categories</string>
+
     <string name="settings_other">Other</string>
     <string name="settings_statistics">Statistics</string>
     <string name="settings_about">About RadioDrive</string>

@@ -38,8 +38,11 @@ public class ItemAdapterCategory extends RecyclerView.Adapter<ItemAdapterCategor
 
         @Override
         public void onClick(View view) {
-            if (categoryClickListener != null) {
-                categoryClickListener.onCategoryClick(categoriesList.get(getAdapterPosition()));
+            if (categoryClickListener != null && categoriesList != null) {
+                int pos = getAdapterPosition();
+                if (pos >= 0 && pos < categoriesList.size()) {
+                    categoryClickListener.onCategoryClick(categoriesList.get(pos));
+                }
             }
         }
     }
@@ -68,6 +71,7 @@ public class ItemAdapterCategory extends RecyclerView.Adapter<ItemAdapterCategor
 
     @Override
     public void onBindViewHolder(CategoryViewHolder holder, int position) {
+        if (categoriesList == null || position >= categoriesList.size()) return;
         final DataCategory category = categoriesList.get(position);
 
         if (category.Label != null) {
@@ -78,11 +82,17 @@ public class ItemAdapterCategory extends RecyclerView.Adapter<ItemAdapterCategor
         if (category.Icon != null) {
             holder.iconView.setImageDrawable(category.Icon);
         }
-        holder.textViewCount.setText(String.valueOf(category.UsedCount));
+        // 仅当 UsedCount 看起来是合法的电台计数时才显示（蜻蜓FM用 UsedCount 存储 ID，不应显示）
+        if (category.UsedCount > 0 && category.UsedCount < 100000) {
+            holder.textViewCount.setText(String.valueOf(category.UsedCount));
+            holder.textViewCount.setVisibility(View.VISIBLE);
+        } else {
+            holder.textViewCount.setVisibility(View.GONE);
+        }
     }
 
     @Override
     public int getItemCount() {
-        return categoriesList.size();
+        return categoriesList != null ? categoriesList.size() : 0;
     }
 }

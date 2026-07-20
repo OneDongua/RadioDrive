@@ -61,4 +61,13 @@
         <item>@string/settings_record_name_formatting_3_display</item>
     </string-array>
 
+    <string-array name="data_source_entries">
+        <item>RadioBrowser</item>
+        <item>蜻蜓FM</item>
+    </string-array>
+    <string-array name="data_source_values">
+        <item>radiobrowser</item>
+        <item>qingting</item>
+    </string-array>
+
 </resources>

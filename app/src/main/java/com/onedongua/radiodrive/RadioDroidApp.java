@@ -15,6 +15,7 @@ import com.onedongua.radiodrive.history.TrackHistoryRepository;
 import com.onedongua.radiodrive.players.mpd.MPDClient;
 import com.onedongua.radiodrive.proxy.ProxySettings;
 import com.onedongua.radiodrive.recording.RecordingsManager;
+import com.onedongua.radiodrive.source.RadioDataSourceManager;
 import com.onedongua.radiodrive.station.live.metadata.TrackMetadataSearcher;
 import com.onedongua.radiodrive.utils.TvChannelManager;
 import com.squareup.picasso.OkHttp3Downloader;
@@ -92,6 +93,8 @@ public class RadioDroidApp extends MultiDexApplication {
 
         CountryCodeDictionary.getInstance().load(this);
         CountryFlagsLoader.getInstance();
+
+        RadioDataSourceManager.getInstance(this, httpClient);
 
         historyManager = new HistoryManager(this);
         favouriteManager = new FavouriteManager(this);

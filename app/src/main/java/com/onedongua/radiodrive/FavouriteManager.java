@@ -11,6 +11,7 @@ import android.os.Build;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
+import com.onedongua.radiodrive.source.RadioDataSourceManager;
 import com.onedongua.radiodrive.station.DataRadioStation;
 
 import java.util.ArrayList;
@@ -18,7 +19,12 @@ import java.util.ArrayList;
 public class FavouriteManager extends StationSaveManager {
     @Override
     protected String getSaveId() {
-        return "favourites";
+        try {
+            RadioDataSourceManager mgr = RadioDataSourceManager.getInstance();
+            return mgr.getCurrentSource().getSourceType() + "_favourites";
+        } catch (Exception e) {
+            return "favourites";
+        }
     }
 
     public FavouriteManager(Context ctx) {

@@ -1,0 +1,2060 @@
+curl ^"https://webbff.qtfm.cn/www^" ^
+  -H ^"Accept: application/json, text/plain, */*^" ^
+  -H ^"Accept-Language: zh-CN,zh;q=0.9,zh-HK;q=0.8,zh-TW;q=0.7,en-US;q=0.6,en-GB;q=0.5,en;q=0.4^" ^
+  -H ^"Connection: keep-alive^" ^
+  -H ^"Content-Type: application/json^" ^
+  -H ^"Origin: https://www.qtfm.cn^" ^
+  -H ^"Referer: https://www.qtfm.cn/^" ^
+  -H ^"Sec-Fetch-Dest: empty^" ^
+  -H ^"Sec-Fetch-Mode: cors^" ^
+  -H ^"Sec-Fetch-Site: same-site^" ^
+  -H ^"User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0^" ^
+  -H ^"sec-ch-ua: ^\^"Microsoft Edge^\^";v=^\^"149^\^", ^\^"Chromium^\^";v=^\^"149^\^", ^\^"Not)A;Brand^\^";v=^\^"24^\^"^" ^
+  -H ^"sec-ch-ua-mobile: ?0^" ^
+  -H ^"sec-ch-ua-platform: ^\^"Windows^\^"^" ^
+  --data-raw ^"^{^\^"query^\^":^\^"^{^\^\n    radioPage(cid:432, page:1)^{^\^\n    bannerData,^\^\n    regions,^\^\n    radioPlaying,^\^\n    replayRadio,^\^\n    classes,^\^\n    ^}^\^\n  ^}^\^"^}^"
+
+return->
+{
+    "data": {
+        "radioPage": {
+            "bannerData": [
+                {
+                    "cover": "//pic.qtfm.cn/sso/52/1691575779464_n0ABACbr0.png",
+                    "title": "新电台听未来",
+                    "linkto": "/radios/47"
+                },
+                {
+                    "cover": "//pic.qtfm.cn/sso/48/1695889565171_u0kfj1jdN.jpeg",
+                    "title": "福建经济广播",
+                    "channelTitle": "福建经济广播",
+                    "category": "经济台",
+                    "count": 48830,
+                    "linkto": "/radios/1732"
+                },
+                {
+                    "cover": "//pic.qtfm.cn/sso/48/1686638532630_wk6lVQcjs.jpeg",
+                    "title": "第二师融媒体中心综合广播FM88.5",
+                    "channelTitle": "第二师融媒体中心综合广播FM88.5",
+                    "category": "生活台",
+                    "count": 11041,
+                    "linkto": "/radios/20211703"
+                },
+                {
+                    "cover": "//pic.qtfm.cn/sso/48/1678178645764_Fb5EbhXtl.jpeg",
+                    "title": "国际新闻",
+                    "channelTitle": "国际新闻",
+                    "category": "综合台",
+                    "count": 485268,
+                    "linkto": "/radios/20500172"
+                },
+                {
+                    "cover": "//pic.qtfm.cn/sso/48/1683622443037_bfnqap8W2.jpeg",
+                    "title": "三亚天涯之声",
+                    "channelTitle": "三亚天涯之声",
+                    "category": "综合台",
+                    "count": 33428,
+                    "linkto": "/radios/20450"
+                },
+                {
+                    "cover": "//pic.qtfm.cn/sso/48/1668405421863_bVoWTKybd.jpeg",
+                    "title": "黑龙江音乐广播",
+                    "channelTitle": "黑龙江音乐广播",
+                    "category": "音乐台",
+                    "count": 33324,
+                    "linkto": "/radios/4969"
+                }
+            ],
+            "regions": [
+                {
+                    "id": 3,
+                    "title": "北京"
+                },
+                {
+                    "id": 5,
+                    "title": "天津"
+                },
+                {
+                    "id": 7,
+                    "title": "河北"
+                },
+                {
+                    "id": 83,
+                    "title": "上海"
+                },
+                {
+                    "id": 19,
+                    "title": "山西"
+                },
+                {
+                    "id": 31,
+                    "title": "内蒙古"
+                },
+                {
+                    "id": 44,
+                    "title": "辽宁"
+                },
+                {
+                    "id": 59,
+                    "title": "吉林"
+                },
+                {
+                    "id": 69,
+                    "title": "黑龙江"
+                },
+                {
+                    "id": 85,
+                    "title": "江苏"
+                },
+                {
+                    "id": 99,
+                    "title": "浙江"
+                },
+                {
+                    "id": 111,
+                    "title": "安徽"
+                },
+                {
+                    "id": 129,
+                    "title": "福建"
+                },
+                {
+                    "id": 139,
+                    "title": "江西"
+                },
+                {
+                    "id": 151,
+                    "title": "山东"
+                },
+                {
+                    "id": 169,
+                    "title": "河南"
+                },
+                {
+                    "id": 187,
+                    "title": "湖北"
+                },
+                {
+                    "id": 202,
+                    "title": "湖南"
+                },
+                {
+                    "id": 217,
+                    "title": "广东"
+                },
+                {
+                    "id": 239,
+                    "title": "广西"
+                },
+                {
+                    "id": 254,
+                    "title": "海南"
+                },
+                {
+                    "id": 257,
+                    "title": "重庆"
+                },
+                {
+                    "id": 259,
+                    "title": "四川"
+                },
+                {
+                    "id": 281,
+                    "title": "贵州"
+                },
+                {
+                    "id": 291,
+                    "title": "云南"
+                },
+                {
+                    "id": 316,
+                    "title": "陕西"
+                },
+                {
+                    "id": 327,
+                    "title": "甘肃"
+                },
+                {
+                    "id": 351,
+                    "title": "宁夏"
+                },
+                {
+                    "id": 357,
+                    "title": "新疆"
+                },
+                {
+                    "id": 308,
+                    "title": "西藏"
+                },
+                {
+                    "id": 342,
+                    "title": "青海"
+                }
+            ],
+            "radioPlaying": [
+                {
+                    "imgUrl": "//pic.qtfm.cn/2020/0402/20200402042931.png",
+                    "name": "广东城市之声",
+                    "channelTitle": "广东城市之声",
+                    "category": "综合台",
+                    "nowplaying": {
+                        "id": 15041399,
+                        "duration": 3600,
+                        "start_time": "18:00:00",
+                        "end_time": "19:00:00",
+                        "name": "足球新势力",
+                        "title": "足球新势力",
+                        "playbill_rid": 3242114,
+                        "playbill_id": 3242114,
+                        "broadcasters": []
+                    },
+                    "playcount": 1226343,
+                    "to": "/radios/469",
+                    "desc": "足球新势力",
+                    "startTime": "18:00:00",
+                    "endTime": "19:00",
+                    "desc2": "18:00:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2021/1231/20211231014716.jpeg",
+                    "name": "黑龙江交通广播",
+                    "channelTitle": "黑龙江交通广播",
+                    "category": "交通台",
+                    "nowplaying": {
+                        "id": 1898007,
+                        "duration": 7200,
+                        "start_time": "17:00:00",
+                        "end_time": "19:00:00",
+                        "name": "一路有你",
+                        "title": "一路有你",
+                        "playbill_rid": 115223,
+                        "playbill_id": 115223,
+                        "broadcasters": [
+                            {
+                                "id": 45161,
+                                "username": "悦彤",
+                                "thumb": "http://pic.qtfm.cn/2017/0317/20170317101855.jpeg",
+                                "weibo_id": "0"
+                            },
+                            {
+                                "id": 80594,
+                                "username": "心者",
+                                "thumb": "http://pic.qtfm.cn/2017/0317/20170317103319.jpeg"
+                            },
+                            {
+                                "id": 378146,
+                                "username": "赵丰",
+                                "thumb": "http://pic.qtfm.cn/2021/1117/20211117114018.jpeg"
+                            }
+                        ]
+                    },
+                    "playcount": 592529,
+                    "to": "/radios/4973",
+                    "desc": "一路有你",
+                    "startTime": "17:00:00",
+                    "endTime": "19:00",
+                    "desc2": "17:00:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2022/0115/20220115043946.gif",
+                    "name": "959年代音乐怀旧好声音",
+                    "channelTitle": "959年代音乐怀旧好声音",
+                    "category": "音乐台",
+                    "nowplaying": {
+                        "id": 3697088,
+                        "duration": 3600,
+                        "start_time": "18:00:00",
+                        "end_time": "19:00:00",
+                        "name": "城市傍晚",
+                        "title": "城市傍晚",
+                        "playbill_rid": 2834828,
+                        "playbill_id": 679432,
+                        "broadcasters": [
+                            {
+                                "id": 193307,
+                                "username": "飞扬"
+                            }
+                        ]
+                    },
+                    "playcount": 260913,
+                    "to": "/radios/5021381",
+                    "desc": "城市傍晚",
+                    "startTime": "18:00:00",
+                    "endTime": "19:00",
+                    "desc2": "18:00:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1567411393720_vdCUW70Lt.jpeg",
+                    "name": "广东广播电视台文体广播",
+                    "channelTitle": "广东广播电视台文体广播",
+                    "category": "体育台",
+                    "nowplaying": {
+                        "id": 2671211,
+                        "duration": 1800,
+                        "start_time": "18:30:00",
+                        "end_time": "19:00:00",
+                        "name": "体坛纵横",
+                        "title": "体坛纵横",
+                        "playbill_rid": 3184662,
+                        "playbill_id": 3184662,
+                        "broadcasters": [
+                            {
+                                "id": 55225,
+                                "username": "任锴",
+                                "thumb": "http://pic.qtfm.cn/2016/1123/20161123031015.jpeg",
+                                "weibo_id": "0"
+                            }
+                        ]
+                    },
+                    "playcount": 294437,
+                    "to": "/radios/471",
+                    "desc": "体坛纵横",
+                    "startTime": "18:30:00",
+                    "endTime": "19:00",
+                    "desc2": "18:30:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1631607042423_APvC7PZWG.jpeg",
+                    "name": "湖北之声",
+                    "channelTitle": "湖北之声",
+                    "category": "资讯台",
+                    "nowplaying": {
+                        "id": 15015629,
+                        "duration": 1800,
+                        "start_time": "18:30:00",
+                        "end_time": "19:00:00",
+                        "name": "全国新闻联播",
+                        "title": "全国新闻联播",
+                        "playbill_rid": 2827298,
+                        "playbill_id": 2102329,
+                        "broadcasters": []
+                    },
+                    "playcount": 547420,
+                    "to": "/radios/1303",
+                    "desc": "全国新闻联播",
+                    "startTime": "18:30:00",
+                    "endTime": "19:00",
+                    "desc2": "18:30:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2013/channel_logo/1910.jpg",
+                    "name": "新疆交通广播",
+                    "channelTitle": "新疆交通广播",
+                    "category": "交通台",
+                    "nowplaying": {
+                        "id": 1910474,
+                        "duration": 3600,
+                        "start_time": "18:00:00",
+                        "end_time": "19:00:00",
+                        "name": "我想换辆车",
+                        "title": "我想换辆车",
+                        "playbill_rid": 57413,
+                        "playbill_id": 57413,
+                        "broadcasters": []
+                    },
+                    "playcount": 312431,
+                    "to": "/radios/1910",
+                    "desc": "我想换辆车",
+                    "startTime": "18:00:00",
+                    "endTime": "19:00",
+                    "desc2": "18:00:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2016/0521/20160521095045577.png",
+                    "name": "福建新闻广播",
+                    "channelTitle": "福建新闻广播",
+                    "category": "资讯台",
+                    "nowplaying": {
+                        "id": 15016501,
+                        "duration": 1800,
+                        "start_time": "18:30:00",
+                        "end_time": "19:00:00",
+                        "name": "央广全国新闻联播",
+                        "title": "央广全国新闻联播",
+                        "playbill_rid": 2138633,
+                        "playbill_id": 2138633,
+                        "broadcasters": []
+                    },
+                    "playcount": 301912,
+                    "to": "/radios/1731",
+                    "desc": "央广全国新闻联播",
+                    "startTime": "18:30:00",
+                    "endTime": "19:00",
+                    "desc2": "18:30:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1606978988505_KEOyj7yxs.jpeg",
+                    "name": "投资传媒（股市广播）",
+                    "channelTitle": "投资传媒（股市广播）",
+                    "category": "经济台",
+                    "nowplaying": {
+                        "id": 1891720,
+                        "duration": 1800,
+                        "start_time": "18:30:00",
+                        "end_time": "19:00:00",
+                        "name": "名家视点",
+                        "title": "名家视点",
+                        "playbill_rid": 3198009,
+                        "playbill_id": 3174268,
+                        "broadcasters": [
+                            {
+                                "id": 381367,
+                                "username": "邓炜晴"
+                            }
+                        ]
+                    },
+                    "playcount": 1642031,
+                    "to": "/radios/4847",
+                    "desc": "名家视点",
+                    "startTime": "18:30:00",
+                    "endTime": "19:00",
+                    "desc2": "18:30:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2022/0619/20220619063631.jpeg",
+                    "name": "两广之声音乐台",
+                    "channelTitle": "两广之声音乐台",
+                    "category": "音乐台",
+                    "nowplaying": {
+                        "id": 15028249,
+                        "duration": 7200,
+                        "start_time": "18:00:00",
+                        "end_time": "20:00:00",
+                        "name": "独家恋曲",
+                        "title": "独家恋曲",
+                        "playbill_rid": 2641274,
+                        "playbill_id": 2640920,
+                        "broadcasters": []
+                    },
+                    "playcount": 7272359,
+                    "to": "/radios/20500149",
+                    "desc": "独家恋曲",
+                    "startTime": "18:00:00",
+                    "endTime": "20:00",
+                    "desc2": "18:00:00-20:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2019/0227/20190227023249.png",
+                    "name": "北京交通广播",
+                    "channelTitle": "北京交通广播",
+                    "category": "交通台",
+                    "nowplaying": {
+                        "id": 1880845,
+                        "duration": 7200,
+                        "start_time": "17:00:00",
+                        "end_time": "19:00:00",
+                        "name": "一路畅通",
+                        "title": "一路畅通",
+                        "playbill_rid": 633923,
+                        "playbill_id": 633923,
+                        "broadcasters": []
+                    },
+                    "playcount": 1302973,
+                    "to": "/radios/336",
+                    "desc": "一路畅通",
+                    "startTime": "17:00:00",
+                    "endTime": "19:00",
+                    "desc2": "17:00:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2014/0616/20140616053545367.jpg",
+                    "name": "河北新闻广播",
+                    "channelTitle": "河北新闻广播",
+                    "category": "资讯台",
+                    "nowplaying": {
+                        "id": 15015476,
+                        "duration": 1800,
+                        "start_time": "18:30:00",
+                        "end_time": "19:00:00",
+                        "name": "全国新闻联播",
+                        "title": "全国新闻联播",
+                        "playbill_rid": 3006074,
+                        "playbill_id": 3006074,
+                        "broadcasters": []
+                    },
+                    "playcount": 2905283,
+                    "to": "/radios/1644",
+                    "desc": "全国新闻联播",
+                    "startTime": "18:30:00",
+                    "endTime": "19:00",
+                    "desc2": "18:30:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2015/0209/20150209212831195.jpg",
+                    "name": "广东珠江经济电台",
+                    "channelTitle": "广东珠江经济电台",
+                    "category": "经济台",
+                    "nowplaying": {
+                        "id": 11519440,
+                        "duration": 3600,
+                        "start_time": "18:30:00",
+                        "end_time": "19:30:00",
+                        "name": "财经访谈一小时",
+                        "title": "财经访谈一小时",
+                        "playbill_rid": 3240574,
+                        "playbill_id": 782533,
+                        "broadcasters": [
+                            {
+                                "id": 48301,
+                                "username": "黎婉仪"
+                            }
+                        ]
+                    },
+                    "playcount": 2170307,
+                    "to": "/radios/1259",
+                    "desc": "财经访谈一小时",
+                    "startTime": "18:30:00",
+                    "endTime": "19:30",
+                    "desc2": "18:30:00-19:30"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2021/0519/20210519030711.jpeg",
+                    "name": "广东南方生活广播",
+                    "channelTitle": "广东南方生活广播",
+                    "category": "生活台",
+                    "nowplaying": {
+                        "id": 15026539,
+                        "duration": 1800,
+                        "start_time": "18:30:00",
+                        "end_time": "19:00:00",
+                        "name": "年代音乐馆",
+                        "title": "年代音乐馆",
+                        "playbill_rid": 3041300,
+                        "playbill_id": 2571664,
+                        "broadcasters": []
+                    },
+                    "playcount": 291999,
+                    "to": "/radios/468",
+                    "desc": "年代音乐馆",
+                    "startTime": "18:30:00",
+                    "endTime": "19:00",
+                    "desc2": "18:30:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2015/0202/20150202170847551.jpg",
+                    "name": "上海新闻广播",
+                    "channelTitle": "上海新闻广播",
+                    "category": "资讯台",
+                    "nowplaying": {
+                        "id": 15020395,
+                        "duration": 1800,
+                        "start_time": "18:30:00",
+                        "end_time": "19:00:00",
+                        "name": "转播全国新闻联播",
+                        "title": "转播全国新闻联播",
+                        "playbill_rid": 2294394,
+                        "playbill_id": 2287565,
+                        "broadcasters": []
+                    },
+                    "playcount": 1576559,
+                    "to": "/radios/270",
+                    "desc": "转播全国新闻联播",
+                    "startTime": "18:30:00",
+                    "endTime": "19:00",
+                    "desc2": "18:30:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1564454286057_EAoJdKLRT.jpeg",
+                    "name": "广东音乐之声",
+                    "channelTitle": "广东音乐之声",
+                    "category": "音乐台",
+                    "nowplaying": {
+                        "id": 15040471,
+                        "duration": 3600,
+                        "start_time": "18:00:00",
+                        "end_time": "19:00:00",
+                        "name": "梦想改造家",
+                        "title": "梦想改造家",
+                        "playbill_rid": 3150748,
+                        "playbill_id": 3150747,
+                        "broadcasters": [
+                            {
+                                "id": 41838,
+                                "username": "Showman",
+                                "thumb": "http://pic.qtfm.cn/2017/0424/20170424052008.jpeg",
+                                "weibo_id": "0"
+                            }
+                        ]
+                    },
+                    "playcount": 648538,
+                    "to": "/radios/1260",
+                    "desc": "梦想改造家",
+                    "startTime": "18:00:00",
+                    "endTime": "19:00",
+                    "desc2": "18:00:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2022/0211/20220211102019.jpeg",
+                    "name": "清晨音乐台",
+                    "channelTitle": "清晨音乐台",
+                    "category": "音乐台",
+                    "nowplaying": {
+                        "id": 2718381,
+                        "duration": 39600,
+                        "start_time": "08:00:00",
+                        "end_time": "19:00:00",
+                        "name": "只听好歌不听话",
+                        "title": "只听好歌不听话",
+                        "playbill_rid": 930001,
+                        "playbill_id": 930001,
+                        "broadcasters": [
+                            {
+                                "id": 7923,
+                                "username": "清晨音乐台",
+                                "thumb": "http://tp2.sinaimg.cn/2022851417/180/5728730857/1",
+                                "weibo_name": "清晨音乐台",
+                                "weibo_id": "2022851417"
+                            },
+                            {
+                                "id": 16163,
+                                "username": "QCR微风",
+                                "thumb": "http://pic.qtfm.cn/2017/0323/20170323070841.jpeg",
+                                "weibo_name": "QCR微风",
+                                "weibo_id": "2147483647"
+                            }
+                        ]
+                    },
+                    "playcount": 1437789,
+                    "to": "/radios/4915",
+                    "desc": "只听好歌不听话",
+                    "startTime": "08:00:00",
+                    "endTime": "19:00",
+                    "desc2": "08:00:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2016/0511/20160511132905582.png",
+                    "name": "嘉兴交通广播",
+                    "channelTitle": "嘉兴交通广播",
+                    "category": "交通台",
+                    "nowplaying": {
+                        "id": 2376500,
+                        "duration": 1800,
+                        "start_time": "18:30:00",
+                        "end_time": "19:00:00",
+                        "name": "行风热线",
+                        "title": "行风热线",
+                        "playbill_rid": 212563,
+                        "playbill_id": 212563,
+                        "broadcasters": [
+                            {
+                                "id": 160760,
+                                "username": "王巍",
+                                "weibo_name": "DJ王巍",
+                                "weibo_id": "1890436390"
+                            },
+                            {
+                                "id": 160763,
+                                "username": "郭丽"
+                            }
+                        ]
+                    },
+                    "playcount": 209359,
+                    "to": "/radios/1135",
+                    "desc": "行风热线",
+                    "startTime": "18:30:00",
+                    "endTime": "19:00",
+                    "desc2": "18:30:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2017/0518/20170518065929.jpeg",
+                    "name": "江苏经典流行音乐",
+                    "channelTitle": "江苏经典流行音乐",
+                    "category": "音乐台",
+                    "nowplaying": {
+                        "id": 11036155,
+                        "duration": 7200,
+                        "start_time": "17:00:00",
+                        "end_time": "19:00:00",
+                        "name": "爱上回家路",
+                        "title": "爱上回家路",
+                        "playbill_rid": 2031428,
+                        "playbill_id": 2031428,
+                        "broadcasters": [
+                            {
+                                "id": 264408,
+                                "username": "徐巍"
+                            }
+                        ]
+                    },
+                    "playcount": 884307,
+                    "to": "/radios/4938",
+                    "desc": "爱上回家路",
+                    "startTime": "17:00:00",
+                    "endTime": "19:00",
+                    "desc2": "17:00:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1572602894027_Jv8W5VjLR.jpeg",
+                    "name": "深圳先锋898",
+                    "channelTitle": "深圳先锋898",
+                    "category": "资讯台",
+                    "nowplaying": {
+                        "id": 15033761,
+                        "duration": 1800,
+                        "start_time": "18:30:00",
+                        "end_time": "19:00:00",
+                        "name": "转播全国新闻联播",
+                        "title": "转播全国新闻联播",
+                        "playbill_rid": 2863668,
+                        "playbill_id": 2863668,
+                        "broadcasters": []
+                    },
+                    "playcount": 1068847,
+                    "to": "/radios/1270",
+                    "desc": "转播全国新闻联播",
+                    "startTime": "18:30:00",
+                    "endTime": "19:00",
+                    "desc2": "18:30:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2017/0321/20170321042352.jpeg",
+                    "name": "四川交通广播FM101.7",
+                    "channelTitle": "四川交通广播FM101.7",
+                    "category": "交通台",
+                    "nowplaying": {
+                        "id": 15040764,
+                        "duration": 3600,
+                        "start_time": "18:00:00",
+                        "end_time": "19:00:00",
+                        "name": "180新闻盘点",
+                        "title": "180新闻盘点",
+                        "playbill_rid": 3162637,
+                        "playbill_id": 3104507,
+                        "broadcasters": [
+                            {
+                                "id": 39847,
+                                "username": "刘晓",
+                                "thumb": "http://pic.qtfm.cn/2020/1222/20201222050222.png",
+                                "weibo_id": "0"
+                            },
+                            {
+                                "id": 382025,
+                                "username": "曹帅"
+                            }
+                        ]
+                    },
+                    "playcount": 354051,
+                    "to": "/radios/4886",
+                    "desc": "180新闻盘点",
+                    "startTime": "18:00:00",
+                    "endTime": "19:00",
+                    "desc2": "18:00:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2020/0331/20200331035111.jpeg",
+                    "name": "济南新闻广播",
+                    "channelTitle": "济南新闻广播",
+                    "category": "资讯台",
+                    "nowplaying": {
+                        "id": 15034023,
+                        "duration": 1800,
+                        "start_time": "18:30:00",
+                        "end_time": "19:00:00",
+                        "name": "转播全国新闻联播",
+                        "title": "转播全国新闻联播",
+                        "playbill_rid": 2872395,
+                        "playbill_id": 40822,
+                        "broadcasters": []
+                    },
+                    "playcount": 922146,
+                    "to": "/radios/1667",
+                    "desc": "转播全国新闻联播",
+                    "startTime": "18:30:00",
+                    "endTime": "19:00",
+                    "desc2": "18:30:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2022/1207/20221207091708.jpeg",
+                    "name": "苏州音乐广播",
+                    "channelTitle": "苏州音乐广播",
+                    "category": "音乐台",
+                    "nowplaying": {
+                        "id": 3430386,
+                        "duration": 7200,
+                        "start_time": "17:00:00",
+                        "end_time": "19:00:00",
+                        "name": "摆渡人的歌",
+                        "title": "摆渡人的歌",
+                        "playbill_rid": 3030388,
+                        "playbill_id": 3030388,
+                        "broadcasters": [
+                            {
+                                "id": 2599,
+                                "username": "陆忆思",
+                                "thumb": "http://tp2.sinaimg.cn/1828685757/180/1286812229/0",
+                                "weibo_name": "948DJ陆忆思",
+                                "weibo_id": "1828685757"
+                            }
+                        ]
+                    },
+                    "playcount": 415123,
+                    "to": "/radios/2803",
+                    "desc": "摆渡人的歌",
+                    "startTime": "17:00:00",
+                    "endTime": "19:00",
+                    "desc2": "17:00:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2019/0313/20190313115555.png",
+                    "name": "经典音乐 FM90.5",
+                    "channelTitle": "经典音乐 FM90.5",
+                    "category": "都市台",
+                    "nowplaying": {
+                        "id": 11071399,
+                        "duration": 7200,
+                        "start_time": "17:00:00",
+                        "end_time": "19:00:00",
+                        "name": "经典也流行",
+                        "title": "经典也流行",
+                        "playbill_rid": 1670419,
+                        "playbill_id": 1670419,
+                        "broadcasters": [
+                            {
+                                "id": 265404,
+                                "username": "马小飞"
+                            }
+                        ]
+                    },
+                    "playcount": 411767,
+                    "to": "/radios/20212269",
+                    "desc": "经典也流行",
+                    "startTime": "17:00:00",
+                    "endTime": "19:00",
+                    "desc2": "17:00:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1631520087008_cMpTFBNNx.jpeg",
+                    "name": "北京文艺广播",
+                    "channelTitle": "北京文艺广播",
+                    "category": "文艺台",
+                    "nowplaying": {
+                        "id": 2775096,
+                        "duration": 7200,
+                        "start_time": "17:00:00",
+                        "end_time": "19:00:00",
+                        "name": "吃喝玩乐大搜索",
+                        "title": "吃喝玩乐大搜索",
+                        "playbill_rid": 634524,
+                        "playbill_id": 634524,
+                        "broadcasters": []
+                    },
+                    "playcount": 742631,
+                    "to": "/radios/333",
+                    "desc": "吃喝玩乐大搜索",
+                    "startTime": "17:00:00",
+                    "endTime": "19:00",
+                    "desc2": "17:00:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2022/1019/20221019042732.jpeg",
+                    "name": "AsiaFM 亚洲粤语台",
+                    "channelTitle": "AsiaFM 亚洲粤语台",
+                    "category": "音乐台",
+                    "nowplaying": {
+                        "id": 15029793,
+                        "duration": 14400,
+                        "start_time": "17:00:00",
+                        "end_time": "21:00:00",
+                        "name": "天若有情",
+                        "title": "天若有情",
+                        "playbill_rid": 2705931,
+                        "playbill_id": 2705931,
+                        "broadcasters": [
+                            {
+                                "id": 57352,
+                                "username": "AsiaFM",
+                                "thumb": "http://pic.qtfm.cn/2022/1019/20221019043513.jpeg",
+                                "weibo_name": "DJ杰森",
+                                "weibo_id": "1561262701"
+                            }
+                        ]
+                    },
+                    "playcount": 477038,
+                    "to": "/radios/15318569",
+                    "desc": "天若有情",
+                    "startTime": "17:00:00",
+                    "endTime": "21:00",
+                    "desc2": "17:00:00-21:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2014/0909/20140909123511693.jpg",
+                    "name": "上海动感101",
+                    "channelTitle": "上海动感101",
+                    "category": "音乐台",
+                    "nowplaying": {
+                        "id": 1880461,
+                        "duration": 10800,
+                        "start_time": "17:00:00",
+                        "end_time": "20:00:00",
+                        "name": "音乐万花筒",
+                        "title": "音乐万花筒",
+                        "playbill_rid": 2023446,
+                        "playbill_id": 776573,
+                        "broadcasters": [
+                            {
+                                "id": 39956,
+                                "username": "汪恺",
+                                "thumb": "http://tp4.sinaimg.cn/1672430335/180/5751553282/1",
+                                "weibo_name": "DJ汪恺",
+                                "weibo_id": "1672430335"
+                            },
+                            {
+                                "id": 39957,
+                                "username": "小楚"
+                            }
+                        ]
+                    },
+                    "playcount": 405331,
+                    "to": "/radios/274",
+                    "desc": "音乐万花筒",
+                    "startTime": "17:00:00",
+                    "endTime": "20:00",
+                    "desc2": "17:00:00-20:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2023/1225/20231225094225.jpeg",
+                    "name": "江苏新闻广播",
+                    "channelTitle": "江苏新闻广播",
+                    "category": "资讯台",
+                    "nowplaying": {
+                        "id": 6462948,
+                        "duration": 5400,
+                        "start_time": "18:30:00",
+                        "end_time": "20:00:00",
+                        "name": "新闻晚高峰",
+                        "title": "新闻晚高峰",
+                        "playbill_rid": 3092042,
+                        "playbill_id": 999533,
+                        "broadcasters": []
+                    },
+                    "playcount": 1637244,
+                    "to": "/radios/4944",
+                    "desc": "新闻晚高峰",
+                    "startTime": "18:30:00",
+                    "endTime": "20:00",
+                    "desc2": "18:30:00-20:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2014/0909/20140909125130474.jpg",
+                    "name": "上海流行音乐LoveRadio",
+                    "channelTitle": "上海流行音乐LoveRadio",
+                    "category": "音乐台",
+                    "nowplaying": {
+                        "id": 15041980,
+                        "duration": 14400,
+                        "start_time": "16:00:00",
+                        "end_time": "20:00:00",
+                        "name": "爱上下班路",
+                        "title": "爱上下班路",
+                        "playbill_rid": 3219041,
+                        "playbill_id": 3219041,
+                        "broadcasters": [
+                            {
+                                "id": 380340,
+                                "username": "Candy"
+                            },
+                            {
+                                "id": 380341,
+                                "username": "天一"
+                            }
+                        ]
+                    },
+                    "playcount": 603854,
+                    "to": "/radios/273",
+                    "desc": "爱上下班路",
+                    "startTime": "16:00:00",
+                    "endTime": "20:00",
+                    "desc2": "16:00:00-20:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/48/1641438475219_mv9SoJP78.jpeg",
+                    "name": "第一财经广播",
+                    "channelTitle": "第一财经广播",
+                    "category": "经济台",
+                    "nowplaying": {
+                        "id": 1880256,
+                        "duration": 3600,
+                        "start_time": "18:00:00",
+                        "end_time": "19:00:00",
+                        "name": "中国财经60分",
+                        "title": "中国财经60分",
+                        "playbill_rid": 1301,
+                        "playbill_id": 1301,
+                        "broadcasters": [
+                            {
+                                "id": 47611,
+                                "username": "刘宇枭"
+                            },
+                            {
+                                "id": 130324,
+                                "username": "崔琦"
+                            }
+                        ]
+                    },
+                    "playcount": 1023411,
+                    "to": "/radios/276",
+                    "desc": "中国财经60分",
+                    "startTime": "18:00:00",
+                    "endTime": "19:00",
+                    "desc2": "18:00:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1631519000891__6ukgTMjU.jpeg",
+                    "name": "江苏交通广播",
+                    "channelTitle": "江苏交通广播",
+                    "category": "交通台",
+                    "nowplaying": {
+                        "id": 15021055,
+                        "duration": 3600,
+                        "start_time": "18:00:00",
+                        "end_time": "19:00:00",
+                        "name": "开心铺子",
+                        "title": "开心铺子",
+                        "playbill_rid": 2323401,
+                        "playbill_id": 630639,
+                        "broadcasters": [
+                            {
+                                "id": 40955,
+                                "username": "程鸣、梁爽"
+                            }
+                        ]
+                    },
+                    "playcount": 610169,
+                    "to": "/radios/4054",
+                    "desc": "开心铺子",
+                    "startTime": "18:00:00",
+                    "endTime": "19:00",
+                    "desc2": "18:00:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/48/1694752887690_rypUKhx3C.jpeg",
+                    "name": "哈尔滨文艺广播",
+                    "channelTitle": "哈尔滨文艺广播",
+                    "category": "文艺台",
+                    "nowplaying": {
+                        "id": 15016278,
+                        "duration": 5400,
+                        "start_time": "17:30:00",
+                        "end_time": "19:00:00",
+                        "name": "花骆东家",
+                        "title": "花骆东家",
+                        "playbill_rid": 2926359,
+                        "playbill_id": 2129559,
+                        "broadcasters": [
+                            {
+                                "id": 41234,
+                                "username": "卫东"
+                            }
+                        ]
+                    },
+                    "playcount": 685346,
+                    "to": "/radios/20083",
+                    "desc": "花骆东家",
+                    "startTime": "17:30:00",
+                    "endTime": "19:00",
+                    "desc2": "17:30:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2012/0821/20120821104235396.jpg",
+                    "name": "长春交通之声",
+                    "channelTitle": "长春交通之声",
+                    "category": "交通台",
+                    "nowplaying": {
+                        "id": 15041326,
+                        "duration": 3600,
+                        "start_time": "18:30:00",
+                        "end_time": "19:30:00",
+                        "name": "968诉帮律师时间",
+                        "title": "968诉帮律师时间",
+                        "playbill_rid": 3224439,
+                        "playbill_id": 3224439,
+                        "broadcasters": [
+                            {
+                                "id": 48339,
+                                "username": "王宁",
+                                "thumb": "http://pic.qtfm.cn/2017/1102/20171102024223.jpeg",
+                                "weibo_id": "0"
+                            },
+                            {
+                                "id": 354358,
+                                "username": "蕙子"
+                            }
+                        ]
+                    },
+                    "playcount": 440364,
+                    "to": "/radios/4967",
+                    "desc": "968诉帮律师时间",
+                    "startTime": "18:30:00",
+                    "endTime": "19:30",
+                    "desc2": "18:30:00-19:30"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1631608611268_yOwdpDG9p.jpeg",
+                    "name": "广州新闻电台",
+                    "channelTitle": "广州新闻电台",
+                    "category": "资讯台",
+                    "nowplaying": {
+                        "id": 15015487,
+                        "duration": 1800,
+                        "start_time": "18:30:00",
+                        "end_time": "19:00:00",
+                        "name": "全国新闻联播",
+                        "title": "全国新闻联播",
+                        "playbill_rid": 3167277,
+                        "playbill_id": 3167277,
+                        "broadcasters": [
+                            {
+                                "id": 382372,
+                                "username": "中国之声"
+                            }
+                        ]
+                    },
+                    "playcount": 677658,
+                    "to": "/radios/4848",
+                    "desc": "全国新闻联播",
+                    "startTime": "18:30:00",
+                    "endTime": "19:00",
+                    "desc2": "18:30:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2014/0829/20140829044142919.png",
+                    "name": "杭州交通91.8电台",
+                    "channelTitle": "杭州交通91.8电台",
+                    "category": "交通台",
+                    "nowplaying": {
+                        "id": 15024312,
+                        "duration": 3600,
+                        "start_time": "18:30:00",
+                        "end_time": "19:30:00",
+                        "name": "惊喜躲不开",
+                        "title": "惊喜躲不开",
+                        "playbill_rid": 2934643,
+                        "playbill_id": 2486875,
+                        "broadcasters": [
+                            {
+                                "id": 28302,
+                                "username": "小麦",
+                                "thumb": "http://pic.qtfm.cn/2021/1103/20211103045109.png",
+                                "weibo_name": "一只小麦桑",
+                                "weibo_id": "2626622641"
+                            },
+                            {
+                                "id": 378102,
+                                "username": "小鲍",
+                                "thumb": "http://pic.qtfm.cn/2021/1103/20211103044339.png"
+                            },
+                            {
+                                "id": 378103,
+                                "username": "小乔",
+                                "thumb": "http://pic.qtfm.cn/2021/1103/20211103044616.png"
+                            },
+                            {
+                                "id": 378108,
+                                "username": "小飞",
+                                "thumb": "http://pic.qtfm.cn/2021/1103/20211103045937.png",
+                                "weibo_name": "918小飞",
+                                "weibo_id": "1993177767"
+                            }
+                        ]
+                    },
+                    "playcount": 601925,
+                    "to": "/radios/1133",
+                    "desc": "惊喜躲不开",
+                    "startTime": "18:30:00",
+                    "endTime": "19:30",
+                    "desc2": "18:30:00-19:30"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2015/0514/2015051417385422.jpg",
+                    "name": "北京新闻广播",
+                    "channelTitle": "北京新闻广播",
+                    "category": "资讯台",
+                    "nowplaying": {
+                        "id": 15038398,
+                        "duration": 3600,
+                        "start_time": "18:00:00",
+                        "end_time": "19:00:00",
+                        "name": "新闻2026",
+                        "title": "新闻2026",
+                        "playbill_rid": 3183168,
+                        "playbill_id": 3183168,
+                        "broadcasters": []
+                    },
+                    "playcount": 2203914,
+                    "to": "/radios/339",
+                    "desc": "新闻2026",
+                    "startTime": "18:00:00",
+                    "endTime": "19:00",
+                    "desc2": "18:00:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2021/0919/20210919103138.jpeg",
+                    "name": "广东新闻广播",
+                    "channelTitle": "广东新闻广播",
+                    "category": "资讯台",
+                    "nowplaying": {
+                        "id": 15014710,
+                        "duration": 1800,
+                        "start_time": "18:30:00",
+                        "end_time": "19:00:00",
+                        "name": "转播全国新闻联播",
+                        "title": "转播全国新闻联播",
+                        "playbill_rid": 3231908,
+                        "playbill_id": 3231908,
+                        "broadcasters": []
+                    },
+                    "playcount": 407169,
+                    "to": "/radios/1254",
+                    "desc": "转播全国新闻联播",
+                    "startTime": "18:30:00",
+                    "endTime": "19:00",
+                    "desc2": "18:30:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2025/0311/20250311045956.png",
+                    "name": "广东交通之声",
+                    "channelTitle": "广东交通之声",
+                    "category": "交通台",
+                    "nowplaying": {
+                        "id": 1891887,
+                        "duration": 1800,
+                        "start_time": "18:30:00",
+                        "end_time": "19:00:00",
+                        "name": "大吉利车队",
+                        "title": "大吉利车队",
+                        "playbill_rid": 2668703,
+                        "playbill_id": 2473525,
+                        "broadcasters": []
+                    },
+                    "playcount": 1132492,
+                    "to": "/radios/1262",
+                    "desc": "大吉利车队",
+                    "startTime": "18:30:00",
+                    "endTime": "19:00",
+                    "desc2": "18:30:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2022/0616/20220616044011.jpeg",
+                    "name": "顺德音乐之声",
+                    "channelTitle": "顺德音乐之声",
+                    "category": "音乐台",
+                    "nowplaying": {
+                        "id": 15030515,
+                        "duration": 7200,
+                        "start_time": "17:00:00",
+                        "end_time": "19:00:00",
+                        "name": "怀旧有你  乐享未来",
+                        "title": "怀旧有你  乐享未来",
+                        "playbill_rid": 3226235,
+                        "playbill_id": 2645271,
+                        "broadcasters": [
+                            {
+                                "id": 379255,
+                                "username": "顺德音乐之声",
+                                "weibo_name": "FM0713",
+                                "weibo_id": "1460028740"
+                            }
+                        ]
+                    },
+                    "playcount": 263147,
+                    "to": "/radios/20500150",
+                    "desc": "怀旧有你  乐享未来",
+                    "startTime": "17:00:00",
+                    "endTime": "19:00",
+                    "desc2": "17:00:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2015/1210/20151210172937967.jpg",
+                    "name": "哈尔滨音乐广播",
+                    "channelTitle": "哈尔滨音乐广播",
+                    "category": "音乐台",
+                    "nowplaying": {
+                        "id": 3482408,
+                        "duration": 1800,
+                        "start_time": "18:30:00",
+                        "end_time": "19:00:00",
+                        "name": "音乐不塞车",
+                        "title": "音乐不塞车",
+                        "playbill_rid": 3155707,
+                        "playbill_id": 3155628,
+                        "broadcasters": [
+                            {
+                                "id": 77908,
+                                "username": "安琪"
+                            }
+                        ]
+                    },
+                    "playcount": 443670,
+                    "to": "/radios/839",
+                    "desc": "音乐不塞车",
+                    "startTime": "18:30:00",
+                    "endTime": "19:00",
+                    "desc2": "18:30:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2015/1223/20151223210921313.jpg",
+                    "name": "河北音乐广播",
+                    "channelTitle": "河北音乐广播",
+                    "category": "音乐台",
+                    "nowplaying": {
+                        "id": 1898611,
+                        "duration": 7200,
+                        "start_time": "17:00:00",
+                        "end_time": "19:00:00",
+                        "name": "一路畅听",
+                        "title": "一路畅听",
+                        "playbill_rid": 2354695,
+                        "playbill_id": 1965404,
+                        "broadcasters": [
+                            {
+                                "id": 40369,
+                                "username": "文章",
+                                "thumb": "http://tp3.sinaimg.cn/2048466070/180/5680959926/1",
+                                "weibo_name": "文章有文章",
+                                "weibo_id": "2048466070"
+                            },
+                            {
+                                "id": 268439,
+                                "username": "文博"
+                            },
+                            {
+                                "id": 377311,
+                                "username": "子琛"
+                            }
+                        ]
+                    },
+                    "playcount": 1786822,
+                    "to": "/radios/1649",
+                    "desc": "一路畅听",
+                    "startTime": "17:00:00",
+                    "endTime": "19:00",
+                    "desc2": "17:00:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2017/0811/20170811095134.jpeg",
+                    "name": "中山电台快乐888",
+                    "channelTitle": "中山电台快乐888",
+                    "category": "综合台",
+                    "nowplaying": {
+                        "id": 2873966,
+                        "duration": 5400,
+                        "start_time": "17:30:00",
+                        "end_time": "19:00:00",
+                        "name": "放工松一松",
+                        "title": "放工松一松",
+                        "playbill_rid": 3213207,
+                        "playbill_id": 26731,
+                        "broadcasters": [
+                            {
+                                "id": 27940,
+                                "username": "大雄"
+                            },
+                            {
+                                "id": 92091,
+                                "username": "全叔"
+                            }
+                        ]
+                    },
+                    "playcount": 348344,
+                    "to": "/radios/1278",
+                    "desc": "放工松一松",
+                    "startTime": "17:30:00",
+                    "endTime": "19:00",
+                    "desc2": "17:30:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1572602808032_aLDLW2SXN.jpeg",
+                    "name": "大连体育广播",
+                    "channelTitle": "大连体育广播",
+                    "category": "体育台",
+                    "nowplaying": {
+                        "id": 15031915,
+                        "duration": 1800,
+                        "start_time": "18:30:00",
+                        "end_time": "19:00:00",
+                        "name": "生活大侦探",
+                        "title": "生活大侦探",
+                        "playbill_rid": 2796822,
+                        "playbill_id": 2796822,
+                        "broadcasters": []
+                    },
+                    "playcount": 341655,
+                    "to": "/radios/1085",
+                    "desc": "生活大侦探",
+                    "startTime": "18:30:00",
+                    "endTime": "19:00",
+                    "desc2": "18:30:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2015/0323/20150323103813782.jpg",
+                    "name": "鹤山电台",
+                    "channelTitle": "鹤山电台",
+                    "category": "综合台",
+                    "nowplaying": {
+                        "id": 15014688,
+                        "duration": 1800,
+                        "start_time": "18:30:00",
+                        "end_time": "19:00:00",
+                        "name": "全国新闻联播",
+                        "title": "全国新闻联播",
+                        "playbill_rid": 2941344,
+                        "playbill_id": 2909933,
+                        "broadcasters": []
+                    },
+                    "playcount": 826090,
+                    "to": "/radios/1286",
+                    "desc": "全国新闻联播",
+                    "startTime": "18:30:00",
+                    "endTime": "19:00",
+                    "desc2": "18:30:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2012/0724/20120724112902255.jpg",
+                    "name": "吉林新闻综合广播",
+                    "channelTitle": "吉林新闻综合广播",
+                    "category": "资讯台",
+                    "nowplaying": {
+                        "id": 15014933,
+                        "duration": 1800,
+                        "start_time": "18:30:00",
+                        "end_time": "19:00:00",
+                        "name": "转播全国新闻联播",
+                        "title": "转播全国新闻联播",
+                        "playbill_rid": 2074261,
+                        "playbill_id": 2074261,
+                        "broadcasters": []
+                    },
+                    "playcount": 587861,
+                    "to": "/radios/4953",
+                    "desc": "转播全国新闻联播",
+                    "startTime": "18:30:00",
+                    "endTime": "19:00",
+                    "desc2": "18:30:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2017/0411/20170411011252.jpeg",
+                    "name": "河北交通广播",
+                    "channelTitle": "河北交通广播",
+                    "category": "交通台",
+                    "nowplaying": {
+                        "id": 1898644,
+                        "duration": 7200,
+                        "start_time": "17:00:00",
+                        "end_time": "19:00:00",
+                        "name": "992晚高峰",
+                        "title": "992晚高峰",
+                        "playbill_rid": 38589,
+                        "playbill_id": 38589,
+                        "broadcasters": [
+                            {
+                                "id": 77355,
+                                "username": "佳音 鲁君"
+                            }
+                        ]
+                    },
+                    "playcount": 960581,
+                    "to": "/radios/1646",
+                    "desc": "992晚高峰",
+                    "startTime": "17:00:00",
+                    "endTime": "19:00",
+                    "desc2": "17:00:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2020/1016/20201016121634.png",
+                    "name": "怀集音乐之声",
+                    "channelTitle": "怀集音乐之声",
+                    "category": "音乐台",
+                    "nowplaying": {
+                        "id": 12640142,
+                        "duration": 3600,
+                        "start_time": "18:00:00",
+                        "end_time": "19:00:00",
+                        "name": "(经典重现)",
+                        "title": "(经典重现)",
+                        "playbill_rid": 3165811,
+                        "playbill_id": 2320015,
+                        "broadcasters": [
+                            {
+                                "id": 193977,
+                                "username": "怀集音乐之声(深圳站)"
+                            }
+                        ]
+                    },
+                    "playcount": 3914234,
+                    "to": "/radios/4804",
+                    "desc": "(经典重现)",
+                    "startTime": "18:00:00",
+                    "endTime": "19:00",
+                    "desc2": "18:00:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1631507628107_SNMv8U_Ue.jpeg",
+                    "name": "浙江之声",
+                    "channelTitle": "浙江之声",
+                    "category": "资讯台",
+                    "nowplaying": {
+                        "id": 15034986,
+                        "duration": 7200,
+                        "start_time": "18:30:00",
+                        "end_time": "20:30:00",
+                        "name": "蔚蓝音乐市集",
+                        "title": "蔚蓝音乐市集",
+                        "playbill_rid": 3077486,
+                        "playbill_id": 2113874,
+                        "broadcasters": [
+                            {
+                                "id": 380977,
+                                "username": "思懿"
+                            },
+                            {
+                                "id": 380978,
+                                "username": "大V"
+                            }
+                        ]
+                    },
+                    "playcount": 481894,
+                    "to": "/radios/4518",
+                    "desc": "蔚蓝音乐市集",
+                    "startTime": "18:30:00",
+                    "endTime": "20:30",
+                    "desc2": "18:30:00-20:30"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1631520307064_Vedy5KORW.jpeg",
+                    "name": "北京体育广播",
+                    "channelTitle": "北京体育广播",
+                    "category": "体育台",
+                    "nowplaying": {
+                        "id": 8386069,
+                        "duration": 1800,
+                        "start_time": "18:30:00",
+                        "end_time": "19:00:00",
+                        "name": "界内界外（重播）",
+                        "title": "界内界外（重播）",
+                        "playbill_rid": 3181991,
+                        "playbill_id": 3063293,
+                        "broadcasters": []
+                    },
+                    "playcount": 335675,
+                    "to": "/radios/335",
+                    "desc": "界内界外（重播）",
+                    "startTime": "18:30:00",
+                    "endTime": "19:00",
+                    "desc2": "18:30:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2016/0412/20160412212622806.png",
+                    "name": "广州交通广播",
+                    "channelTitle": "广州交通广播",
+                    "category": "交通台",
+                    "nowplaying": {
+                        "id": 9378295,
+                        "duration": 7200,
+                        "start_time": "17:00:00",
+                        "end_time": "19:00:00",
+                        "name": "一路开心",
+                        "title": "一路开心",
+                        "playbill_rid": 1473222,
+                        "playbill_id": 1473222,
+                        "broadcasters": [
+                            {
+                                "id": 45643,
+                                "username": "上官飞凤",
+                                "weibo_name": "上官飞凤",
+                                "weibo_id": "1712803050"
+                            },
+                            {
+                                "id": 104118,
+                                "username": "汤面",
+                                "weibo_name": "上汤靓面",
+                                "weibo_id": "1673019720"
+                            },
+                            {
+                                "id": 378626,
+                                "username": "陈子康"
+                            }
+                        ]
+                    },
+                    "playcount": 406147,
+                    "to": "/radios/4955",
+                    "desc": "一路开心",
+                    "startTime": "17:00:00",
+                    "endTime": "19:00",
+                    "desc2": "17:00:00-19:00"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2020/0405/20200405120311.jpeg",
+                    "name": "FM93浙江交通之声",
+                    "channelTitle": "FM93浙江交通之声",
+                    "category": "交通台",
+                    "nowplaying": {
+                        "id": 2534241,
+                        "duration": 7200,
+                        "start_time": "17:30:00",
+                        "end_time": "19:30:00",
+                        "name": "93新动力",
+                        "title": "93新动力",
+                        "playbill_rid": 3068042,
+                        "playbill_id": 3068042,
+                        "broadcasters": [
+                            {
+                                "id": 79302,
+                                "username": "雷哥"
+                            },
+                            {
+                                "id": 361878,
+                                "username": "畅薇"
+                            }
+                        ]
+                    },
+                    "playcount": 675104,
+                    "to": "/radios/4522",
+                    "desc": "93新动力",
+                    "startTime": "17:30:00",
+                    "endTime": "19:30",
+                    "desc2": "17:30:00-19:30"
+                }
+            ],
+            "replayRadio": [
+                {
+                    "imgUrl": "//pic.qtfm.cn/2016/0826/20160826163545153.png",
+                    "name": "交友联盟",
+                    "category": "品质生活",
+                    "playcount": 27393,
+                    "to": "/channels/179970",
+                    "desc2": "FM100.7咸阳人民广播电台"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/channel/2021/05/24/5305ca67993f30d538f5404a209c8ada.jpg",
+                    "name": "楚月有话说",
+                    "category": "汽车交通",
+                    "playcount": 43211,
+                    "to": "/channels/178876",
+                    "desc2": "FM1044太原经济广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2017/1208/20171208021833.jpeg",
+                    "name": "星光夜话",
+                    "category": "情感两性",
+                    "playcount": 788891,
+                    "to": "/channels/234109",
+                    "desc2": "沈阳之声"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2019/0326/20190326040037.jpeg",
+                    "name": "爱情1+1",
+                    "playcount": 922146,
+                    "to": "/channels/299477",
+                    "desc2": "济南新闻广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/channel/2022/03/09/c052fee0207907ae0ab9488027b674c4.jpg",
+                    "name": "非常体坛",
+                    "playcount": 341655,
+                    "to": "/channels/179008",
+                    "desc2": "大连体育广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2018/1109/20181109100538.jpeg",
+                    "name": "高震与秦鸽",
+                    "category": "娱乐搞笑",
+                    "playcount": 440364,
+                    "to": "/channels/254302",
+                    "desc2": "长春交通之声"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2016/0826/20160826163140916.png",
+                    "name": "体坛龙虎榜",
+                    "category": "大话体坛",
+                    "playcount": 341655,
+                    "to": "/channels/179464",
+                    "desc2": "大连体育广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2017/0901/20170901051544.jpeg",
+                    "name": "城市俏佳人",
+                    "playcount": 326,
+                    "to": "/channels/299466",
+                    "desc2": "佛山电台千色985"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2019/0326/20190326040037.jpeg",
+                    "name": "博闻天下",
+                    "category": "时事要闻",
+                    "playcount": 922146,
+                    "to": "/channels/299483",
+                    "desc2": "济南新闻广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/channel/2021/06/23/eed355ad3f0f9e7b92cf06664a03d7db.jpg",
+                    "name": "相声大会",
+                    "playcount": 73,
+                    "to": "/channels/404694",
+                    "desc2": "FM107.2长岛人民广播电台"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1557739651648_jy0WDpTQ0o.jpeg",
+                    "name": "讲东讲西，讲东西",
+                    "category": "民生热点",
+                    "playcount": 168,
+                    "to": "/channels/179128",
+                    "desc2": "佛山电台真爱946"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2013/0115/20130115025539256.jpg",
+                    "name": "非凡倾听",
+                    "category": "情感两性",
+                    "playcount": 788891,
+                    "to": "/channels/299440",
+                    "desc2": "沈阳之声"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2016/0826/20160826163209672.png",
+                    "name": "爱车有话说",
+                    "category": "汽车交通",
+                    "playcount": 53849,
+                    "to": "/channels/179528",
+                    "desc2": "新疆929文化旅游广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2019/0326/20190326040037.jpeg",
+                    "name": "天天说事",
+                    "playcount": 922146,
+                    "to": "/channels/299470",
+                    "desc2": "济南新闻广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2016/0826/20160826162516947.png",
+                    "name": "车天车地车世界",
+                    "category": "汽车交通",
+                    "playcount": 406147,
+                    "to": "/channels/179056",
+                    "desc2": "广州交通广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2016/0826/20160826162035731.png",
+                    "name": "财富方言社会",
+                    "category": "民生热点",
+                    "playcount": 78325,
+                    "to": "/channels/178748",
+                    "desc2": "四川财富生活广播FM94.0"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1554872131748_wowh7PxTG.png",
+                    "name": "一路涛客秀",
+                    "category": "民生热点",
+                    "playcount": 301912,
+                    "to": "/channels/179592",
+                    "desc2": "福建新闻广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2015/1230/2015123018455936.png",
+                    "name": "欢喜就好（闽南语）",
+                    "playcount": 207960,
+                    "to": "/channels/299469",
+                    "desc2": "泉州904交通之声"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2013/channel_logo/1270.jpg",
+                    "name": "先锋看天下",
+                    "playcount": 1068847,
+                    "to": "/channels/299442",
+                    "desc2": "深圳先锋898"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2016/0826/20160826162315259.png",
+                    "name": "小江播报",
+                    "category": "时事要闻",
+                    "playcount": 209359,
+                    "to": "/channels/178930",
+                    "desc2": "嘉兴交通广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1557739756421_XNeOZLYXc6.jpeg",
+                    "name": "东家不打，打东家",
+                    "category": "时事要闻",
+                    "playcount": 168,
+                    "to": "/channels/179110",
+                    "desc2": "佛山电台真爱946"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2016/0826/20160826162316345.png",
+                    "name": "好好先生",
+                    "category": "民生热点",
+                    "playcount": 406147,
+                    "to": "/channels/178932",
+                    "desc2": "广州交通广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2016/0826/20160826162124881.png",
+                    "name": "汽车相对论",
+                    "category": "汽车交通",
+                    "playcount": 188408,
+                    "to": "/channels/178808",
+                    "desc2": "沈阳交通广播FM98.6"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1558344945754_D3qN_fKua.jpeg",
+                    "name": "如此动听",
+                    "category": "音乐时尚",
+                    "playcount": 142842,
+                    "to": "/channels/239371",
+                    "desc2": "厦门音乐广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2017/0901/20170901053118.jpeg",
+                    "name": "小说联播",
+                    "playcount": 40,
+                    "to": "/channels/299468",
+                    "desc2": "佛山电台顺德台"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2016/0826/20160826163031391.png",
+                    "name": "读家新闻",
+                    "category": "时事要闻",
+                    "playcount": 1068847,
+                    "to": "/channels/179316",
+                    "desc2": "深圳先锋898"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2016/0603/20160603144029870.png",
+                    "name": "故事长廊",
+                    "playcount": 197139,
+                    "to": "/channels/299475",
+                    "desc2": "珠海斗门电台"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2017/1110/20171110115753.png",
+                    "name": "三点开整",
+                    "category": "娱乐搞笑",
+                    "playcount": 40554,
+                    "to": "/channels/299443",
+                    "desc2": "洛阳音乐广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/channel/2021/05/24/77e899bd7a6a409c8dbb97f2dda80690.jpg",
+                    "name": "小说连播",
+                    "category": "小说故事",
+                    "playcount": 677658,
+                    "to": "/channels/178938",
+                    "desc2": "广州新闻电台"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2013/0115/20130115025539256.jpg",
+                    "name": "辣姐有话要说",
+                    "category": "民生热点",
+                    "playcount": 788891,
+                    "to": "/channels/299449",
+                    "desc2": "沈阳之声"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2017/1208/20171208032635.jpeg",
+                    "name": "徐峰侃车",
+                    "category": "汽车交通",
+                    "playcount": 443670,
+                    "to": "/channels/234145",
+                    "desc2": "哈尔滨音乐广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2019/0326/20190326040037.jpeg",
+                    "name": "八点聊天室",
+                    "playcount": 922146,
+                    "to": "/channels/299441",
+                    "desc2": "济南新闻广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2016/0826/20160826162432236.png",
+                    "name": "穿梭孖宝",
+                    "category": "民生热点",
+                    "playcount": 677658,
+                    "to": "/channels/179012",
+                    "desc2": "广州新闻电台"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1616550116645_nf1fHYdc4.jpeg",
+                    "name": "清晨新闻",
+                    "playcount": 1576559,
+                    "to": "/channels/398948",
+                    "desc2": "上海新闻广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2012/0816/20120816114101877.jpg",
+                    "name": "听说很好看",
+                    "playcount": 484531,
+                    "to": "/channels/299451",
+                    "desc2": "济南经济广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2017/0811/20170811095134.jpeg",
+                    "name": "888剧场",
+                    "playcount": 348344,
+                    "to": "/channels/299479",
+                    "desc2": "中山电台快乐888"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2016/0826/20160826162043629.png",
+                    "name": "小说连播（鹤山电台）",
+                    "category": "小说故事",
+                    "playcount": 826090,
+                    "to": "/channels/178758",
+                    "desc2": "鹤山电台"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2016/0826/20160826162733141.png",
+                    "name": "请和我说",
+                    "category": "情感两性",
+                    "playcount": 685346,
+                    "to": "/channels/179138",
+                    "desc2": "哈尔滨文艺广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2018/0130/20180130023507.jpeg",
+                    "name": "音乐TALK SHOW",
+                    "category": "娱乐搞笑",
+                    "playcount": 443670,
+                    "to": "/channels/238742",
+                    "desc2": "哈尔滨音乐广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2016/0826/2016082616335466.png",
+                    "name": "小说连播",
+                    "category": "小说故事",
+                    "playcount": 124087,
+                    "to": "/channels/179730",
+                    "desc2": "花都广播电台"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2016/0826/20160826163426976.png",
+                    "name": "讲古台",
+                    "category": "曲艺杂谈",
+                    "playcount": 168,
+                    "to": "/channels/179802",
+                    "desc2": "佛山电台真爱946"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2016/0826/20160826162059534.png",
+                    "name": "我心飞翔",
+                    "category": "娱乐搞笑",
+                    "playcount": 1544,
+                    "to": "/channels/178778",
+                    "desc2": "无锡都市生活广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2017/0928/20170928054640.jpeg",
+                    "name": "夜空不寂寞",
+                    "playcount": 399196,
+                    "to": "/channels/299425",
+                    "desc2": "都市101经济广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1586930117583_hGV5UbY66.jpeg",
+                    "name": "新闻882",
+                    "category": "时事要闻",
+                    "playcount": 137401,
+                    "to": "/channels/355285",
+                    "desc2": "石家庄新闻广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2016/0826/20160826163218397.png",
+                    "name": "1039笑友会",
+                    "category": "娱乐搞笑",
+                    "playcount": 33462,
+                    "to": "/channels/179538",
+                    "desc2": "温州交通广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1574837193069_10xpydt28.jpeg",
+                    "name": "情迷经典",
+                    "category": "音乐时尚",
+                    "playcount": 826090,
+                    "to": "/channels/334420",
+                    "desc2": "鹤山电台"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1617847167117_08_g8NMte.jpeg",
+                    "name": "青春集结号",
+                    "category": "音乐时尚",
+                    "playcount": 100634,
+                    "to": "/channels/179042",
+                    "desc2": "安徽交通广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1595402478517_9FZ7uoGIu.png",
+                    "name": "新石门客栈",
+                    "category": "明星访谈",
+                    "playcount": 960581,
+                    "to": "/channels/368915",
+                    "desc2": "河北交通广播"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/2013/channel_logo/1270.jpg",
+                    "name": "898晚新闻",
+                    "playcount": 1068847,
+                    "to": "/channels/299472",
+                    "desc2": "深圳先锋898"
+                },
+                {
+                    "imgUrl": "//pic.qtfm.cn/sso/198/1614670469269_auu1ErHMF.jpeg",
+                    "name": "12345城市热线",
+                    "playcount": 440364,
+                    "to": "/channels/395693",
+                    "desc2": "长春交通之声"
+                }
+            ],
+            "classes": [
+                {
+                    "id": 433,
+                    "title": "资讯台"
+                },
+                {
+                    "id": 442,
+                    "title": "音乐台"
+                },
+                {
+                    "id": 429,
+                    "title": "交通台"
+                },
+                {
+                    "id": 439,
+                    "title": "经济台"
+                },
+                {
+                    "id": 432,
+                    "title": "文艺台"
+                },
+                {
+                    "id": 441,
+                    "title": "都市台"
+                },
+                {
+                    "id": 430,
+                    "title": "体育台"
+                },
+                {
+                    "id": 431,
+                    "title": "双语台"
+                },
+                {
+                    "id": 440,
+                    "title": "综合台"
+                },
+                {
+                    "id": 438,
+                    "title": "生活台"
+                },
+                {
+                    "id": 435,
+                    "title": "旅游台"
+                },
+                {
+                    "id": 436,
+                    "title": "曲艺台"
+                },
+                {
+                    "id": 434,
+                    "title": "方言台"
+                }
+            ]
+        }
+    }
+}

@@ -2,6 +2,7 @@ package com.onedongua.radiodrive;
 
 import android.content.Context;
 
+import com.onedongua.radiodrive.source.RadioDataSourceManager;
 import com.onedongua.radiodrive.station.DataRadioStation;
 
 public class HistoryManager extends StationSaveManager {
@@ -9,7 +10,12 @@ public class HistoryManager extends StationSaveManager {
 
     @Override
     protected String getSaveId() {
-        return "history";
+        try {
+            RadioDataSourceManager mgr = RadioDataSourceManager.getInstance();
+            return mgr.getCurrentSource().getSourceType() + "_history";
+        } catch (Exception e) {
+            return "history";
+        }
     }
 
     public HistoryManager(Context ctx) {

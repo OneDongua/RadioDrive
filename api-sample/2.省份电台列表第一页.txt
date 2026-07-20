@@ -1,0 +1,158 @@
+curl ^"https://webbff.qtfm.cn/www^" ^
+  -H ^"Accept: application/json, text/plain, */*^" ^
+  -H ^"Accept-Language: zh-CN,zh;q=0.9,zh-HK;q=0.8,zh-TW;q=0.7,en-US;q=0.6,en-GB;q=0.5,en;q=0.4^" ^
+  -H ^"Connection: keep-alive^" ^
+  -H ^"Content-Type: application/json^" ^
+  -H ^"Origin: https://www.qtfm.cn^" ^
+  -H ^"Referer: https://www.qtfm.cn/^" ^
+  -H ^"Sec-Fetch-Dest: empty^" ^
+  -H ^"Sec-Fetch-Mode: cors^" ^
+  -H ^"Sec-Fetch-Site: same-site^" ^
+  -H ^"User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0^" ^
+  -H ^"sec-ch-ua: ^\^"Microsoft Edge^\^";v=^\^"149^\^", ^\^"Chromium^\^";v=^\^"149^\^", ^\^"Not)A;Brand^\^";v=^\^"24^\^"^" ^
+  -H ^"sec-ch-ua-mobile: ?0^" ^
+  -H ^"sec-ch-ua-platform: ^\^"Windows^\^"^" ^
+  --data-raw ^"^{^\^"query^\^":^\^"^{^\^\n    radioPage(cid:217, page:1)^{^\^\n      contents^\^\n    ^}^\^\n  ^}^\^"^}^"
+
+return->
+{
+    "data": {
+        "radioPage": {
+            "contents": {
+                "items": [
+                    {
+                        "id": 1259,
+                        "imgUrl": "//pic.qtfm.cn/2015/0209/20150209212831195.jpg",
+                        "title": "广东珠江经济电台",
+                        "clout": 13330,
+                        "playcount": 2170307,
+                        "desc": "正在直播： 财经访谈一小时",
+                        "podcaster": {
+                            "id": 48301,
+                            "username": "黎婉仪"
+                        }
+                    },
+                    {
+                        "id": 4847,
+                        "imgUrl": "//pic.qtfm.cn/sso/198/1606978988505_KEOyj7yxs.jpeg",
+                        "title": "投资传媒（股市广播）",
+                        "clout": 12331,
+                        "playcount": 1642031,
+                        "desc": "正在直播： 名家视点",
+                        "podcaster": {
+                            "id": 381367,
+                            "username": "邓炜晴"
+                        }
+                    },
+                    {
+                        "id": 469,
+                        "imgUrl": "//pic.qtfm.cn/2020/0402/20200402042931.png",
+                        "title": "广东城市之声",
+                        "clout": 12004,
+                        "playcount": 1226343,
+                        "desc": "正在直播： 足球新势力"
+                    },
+                    {
+                        "id": 1262,
+                        "imgUrl": "//pic.qtfm.cn/2025/0311/20250311045956.png",
+                        "title": "广东交通之声",
+                        "clout": 12107,
+                        "playcount": 1132492,
+                        "desc": "正在直播： 大吉利车队"
+                    },
+                    {
+                        "id": 1270,
+                        "imgUrl": "//pic.qtfm.cn/sso/198/1572602894027_Jv8W5VjLR.jpeg",
+                        "title": "深圳先锋898",
+                        "clout": 11709,
+                        "playcount": 1068847,
+                        "desc": "正在直播： 转播全国新闻联播"
+                    },
+                    {
+                        "id": 1286,
+                        "imgUrl": "//pic.qtfm.cn/2015/0323/20150323103813782.jpg",
+                        "title": "鹤山电台",
+                        "clout": 10914,
+                        "playcount": 826090,
+                        "desc": "正在直播： 全国新闻联播"
+                    },
+                    {
+                        "id": 4848,
+                        "imgUrl": "//pic.qtfm.cn/sso/198/1631608611268_yOwdpDG9p.jpeg",
+                        "title": "广州新闻电台",
+                        "clout": 9437,
+                        "playcount": 677658,
+                        "desc": "正在直播： 全国新闻联播",
+                        "podcaster": {
+                            "id": 382372,
+                            "username": "中国之声"
+                        }
+                    },
+                    {
+                        "id": 1260,
+                        "imgUrl": "//pic.qtfm.cn/sso/198/1564454286057_EAoJdKLRT.jpeg",
+                        "title": "广东音乐之声",
+                        "clout": 12009,
+                        "playcount": 648538,
+                        "desc": "正在直播： 梦想改造家",
+                        "podcaster": {
+                            "id": 41838,
+                            "username": "Showman",
+                            "thumb": "http://pic.qtfm.cn/2017/0424/20170424052008.jpeg",
+                            "weibo_id": "0"
+                        }
+                    },
+                    {
+                        "id": 1254,
+                        "imgUrl": "//pic.qtfm.cn/2021/0919/20210919103138.jpeg",
+                        "title": "广东新闻广播",
+                        "clout": 6360,
+                        "playcount": 407169,
+                        "desc": "正在直播： 转播全国新闻联播"
+                    },
+                    {
+                        "id": 4955,
+                        "imgUrl": "//pic.qtfm.cn/2016/0412/20160412212622806.png",
+                        "title": "广州交通广播",
+                        "clout": 6082,
+                        "playcount": 406147,
+                        "desc": "正在直播： 一路开心",
+                        "podcaster": {
+                            "id": 45643,
+                            "username": "上官飞凤",
+                            "weibo_name": "上官飞凤",
+                            "weibo_id": "1712803050"
+                        }
+                    },
+                    {
+                        "id": 1278,
+                        "imgUrl": "//pic.qtfm.cn/2017/0811/20170811095134.jpeg",
+                        "title": "中山电台快乐888",
+                        "clout": 5337,
+                        "playcount": 348344,
+                        "desc": "正在直播： 放工松一松",
+                        "podcaster": {
+                            "id": 27940,
+                            "username": "大雄"
+                        }
+                    },
+                    {
+                        "id": 471,
+                        "imgUrl": "//pic.qtfm.cn/sso/198/1567411393720_vdCUW70Lt.jpeg",
+                        "title": "广东广播电视台文体广播",
+                        "clout": 5352,
+                        "playcount": 294437,
+                        "desc": "正在直播： 体坛纵横",
+                        "podcaster": {
+                            "id": 55225,
+                            "username": "任锴",
+                            "thumb": "http://pic.qtfm.cn/2016/1123/20161123031015.jpeg",
+                            "weibo_id": "0"
+                        }
+                    }
+                ],
+                "count": 62
+            }
+        }
+    }
+}

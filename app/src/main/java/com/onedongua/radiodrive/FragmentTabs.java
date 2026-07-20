@@ -16,9 +16,11 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
-
 import com.onedongua.radiodrive.interfaces.IFragmentRefreshable;
 import com.onedongua.radiodrive.interfaces.IFragmentSearchable;
+import com.onedongua.radiodrive.source.RadioDataSourceManager;
+import com.onedongua.radiodrive.source.qingting.FragmentQingtingCategories;
+import com.onedongua.radiodrive.source.qingting.FragmentQingtingStations;
 import com.onedongua.radiodrive.station.FragmentStations;
 import com.onedongua.radiodrive.station.StationsFilter;
 
@@ -26,7 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FragmentTabs extends Fragment implements IFragmentRefreshable, IFragmentSearchable {
-    private String itsAdressWWWLocal = "json/stations/bycountryexact/internet?order=clickcount&reverse=true";
+    private String itsAdressWWWLocal = "json/stations/bycountrycodeexact/internet?order=clickcount&reverse=true";
     private String itsAdressWWWTopClick = "json/stations/topclick/100";
     private String itsAdressWWWTopVote = "json/stations/topvote/100";
     private String itsAdressWWWChangedLately = "json/stations/lastchange/100";
@@ -35,8 +37,7 @@ public class FragmentTabs extends Fragment implements IFragmentRefreshable, IFra
     private String itsAdressWWWCountries = "json/countrycodes";
     private String itsAdressWWWLanguages = "json/languages";
 
-    // Note: the actual order of tabs is defined
-    // further down when populating the ViewPagerAdapter
+    // RadioBrowser tab indices
     private static final int IDX_LOCAL = 0;
     private static final int IDX_TOP_CLICK = 1;
     private static final int IDX_TOP_VOTE = 2;
@@ -47,13 +48,23 @@ public class FragmentTabs extends Fragment implements IFragmentRefreshable, IFra
     private static final int IDX_LANGUAGES = 7;
     private static final int IDX_SEARCH = 8;
 
+    // Qingting tab indices
+    private static final int QT_IDX_FEATURED = 0;
+    private static final int QT_IDX_REGIONS = 1;
+    private static final int QT_IDX_CLASSES = 2;
+    private static final int QT_IDX_SEARCH = 3;
+
     public static ViewPager viewPager;
 
-    private String queuedSearchQuery; // Search may be requested before onCreateView so we should wait
+    private String queuedSearchQuery;
     private StationsFilter.SearchStyle queuedSearchStyle;
 
-    private Fragment[] fragments = new Fragment[9];
-    private String[] addresses = new String[]{
+    // Dynamic arrays — size depends on data source
+    private Fragment[] fragments;
+    private String[] addresses;
+
+    // RadioBrowser-specific
+    private String[] rbAddresses = new String[]{
             itsAdressWWWLocal,
             itsAdressWWWTopClick,
             itsAdressWWWTopVote,
@@ -80,12 +91,6 @@ public class FragmentTabs extends Fragment implements IFragmentRefreshable, IFra
             queuedSearchQuery = null;
             queuedSearchStyle = StationsFilter.SearchStyle.ByName;
         }
-
-        /*
-         * Now , this is a workaround ,
-         * The setupWithViewPager doesn't works without the runnable .
-         * Maybe a Support Library Bug .
-         */
 
         tabLayout.post(new Runnable() {
             @Override
@@ -130,7 +135,7 @@ public class FragmentTabs extends Fragment implements IFragmentRefreshable, IFra
                 return countryCode;
             }
             countryCode = ctx.getResources().getConfiguration().locale.getCountry();
-            addresses[IDX_LOCAL] = "json/stations/bycountrycodeexact/?order=clickcount&reverse=true";
+            rbAddresses[IDX_LOCAL] = "json/stations/bycountrycodeexact/?order=clickcount&reverse=true";
             Log.d("MAIN", "Locale: '" + countryCode + "'");
             if (countryCode != null && countryCode.length() == 2) {
                 return countryCode;
@@ -139,11 +144,22 @@ public class FragmentTabs extends Fragment implements IFragmentRefreshable, IFra
         return null;
     }
 
-    private void setupViewPager(ViewPager viewPager) {
+    private boolean isQingtingSource() {
+        try {
+            RadioDataSourceManager manager = RadioDataSourceManager.getInstance();
+            return manager.getCurrentSource().getSourceType().equals("qingting");
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    private void setupRadioBrowserTabs(ViewPager viewPager) {
         String countryCode = getCountryCode();
         if (countryCode != null) {
-            addresses[IDX_LOCAL] = "json/stations/bycountrycodeexact/" + countryCode + "?order=clickcount&reverse=true";
+            rbAddresses[IDX_LOCAL] = "json/stations/bycountrycodeexact/" + countryCode + "?order=clickcount&reverse=true";
         }
+        addresses = rbAddresses;
+        fragments = new Fragment[9];
 
         fragments[IDX_LOCAL] = new FragmentStations();
         fragments[IDX_TOP_CLICK] = new FragmentStations();
@@ -158,11 +174,9 @@ public class FragmentTabs extends Fragment implements IFragmentRefreshable, IFra
         for (int i = 0; i < fragments.length; i++) {
             Bundle bundle = new Bundle();
             bundle.putString("url", addresses[i]);
-
             if (i == IDX_SEARCH) {
                 bundle.putBoolean(FragmentStations.KEY_SEARCH_ENABLED, true);
             }
-
             fragments[i].setArguments(bundle);
         }
 
@@ -187,12 +201,61 @@ public class FragmentTabs extends Fragment implements IFragmentRefreshable, IFra
         viewPager.setAdapter(adapter);
     }
 
+    private void setupQingtingTabs(ViewPager viewPager) {
+        fragments = new Fragment[4];
+
+        // 推荐（使用 MODE_FEATURED 调用 getFeaturedStations）
+        FragmentQingtingStations featuredFrag = new FragmentQingtingStations();
+        Bundle featuredArgs = new Bundle();
+        featuredArgs.putInt(FragmentQingtingStations.KEY_MODE, FragmentQingtingStations.MODE_FEATURED);
+        featuredFrag.setArguments(featuredArgs);
+        fragments[QT_IDX_FEATURED] = featuredFrag;
+
+        // 地区
+        FragmentQingtingCategories regionsFrag = new FragmentQingtingCategories();
+        Bundle regionsArgs = new Bundle();
+        regionsArgs.putString(FragmentQingtingCategories.KEY_CATEGORY_TYPE, FragmentQingtingCategories.TYPE_REGIONS);
+        regionsFrag.setArguments(regionsArgs);
+        fragments[QT_IDX_REGIONS] = regionsFrag;
+
+        // 分类
+        FragmentQingtingCategories classesFrag = new FragmentQingtingCategories();
+        Bundle classesArgs = new Bundle();
+        classesArgs.putString(FragmentQingtingCategories.KEY_CATEGORY_TYPE, FragmentQingtingCategories.TYPE_CLASSES);
+        classesFrag.setArguments(classesArgs);
+        fragments[QT_IDX_CLASSES] = classesFrag;
+
+        // 搜索（使用 MODE_SEARCH + IFragmentSearchable，调用蜻蜓 API 搜索）
+        FragmentQingtingStations searchFrag = new FragmentQingtingStations();
+        Bundle searchArgs = new Bundle();
+        searchArgs.putInt(FragmentQingtingStations.KEY_MODE, FragmentQingtingStations.MODE_SEARCH);
+        searchFrag.setArguments(searchArgs);
+        fragments[QT_IDX_SEARCH] = searchFrag;
+
+        FragmentManager m = getChildFragmentManager();
+        ViewPagerAdapter adapter = new ViewPagerAdapter(m);
+        adapter.addFragment(fragments[QT_IDX_FEATURED], R.string.action_featured);
+        adapter.addFragment(fragments[QT_IDX_REGIONS], R.string.action_regions);
+        adapter.addFragment(fragments[QT_IDX_CLASSES], R.string.action_qingting_categories);
+        adapter.addFragment(fragments[QT_IDX_SEARCH], R.string.action_search);
+        viewPager.setAdapter(adapter);
+    }
+
+    private void setupViewPager(ViewPager viewPager) {
+        if (isQingtingSource()) {
+            setupQingtingTabs(viewPager);
+        } else {
+            setupRadioBrowserTabs(viewPager);
+        }
+    }
+
     public void Search(StationsFilter.SearchStyle searchStyle, final String query) {
         Log.d("TABS", "Search = " + query + " searchStyle=" + searchStyle);
         if (viewPager != null) {
             Log.d("TABS", "a Search = " + query);
-            viewPager.setCurrentItem(IDX_SEARCH, false);
-            ((IFragmentSearchable) fragments[IDX_SEARCH]).Search(searchStyle, query);
+            int searchIdx = isQingtingSource() ? QT_IDX_SEARCH : IDX_SEARCH;
+            viewPager.setCurrentItem(searchIdx, false);
+            ((IFragmentSearchable) fragments[searchIdx]).Search(searchStyle, query);
         } else {
             Log.d("TABS", "b Search = " + query);
             queuedSearchQuery = query;
@@ -202,9 +265,12 @@ public class FragmentTabs extends Fragment implements IFragmentRefreshable, IFra
 
     @Override
     public void Refresh() {
-        Fragment fragment = fragments[viewPager.getCurrentItem()];
-        if (fragment instanceof FragmentBase) {
-            ((FragmentBase) fragment).DownloadUrl(true);
+        int idx = viewPager.getCurrentItem();
+        if (idx >= 0 && idx < fragments.length) {
+            Fragment fragment = fragments[idx];
+            if (fragment instanceof FragmentBase) {
+                ((FragmentBase) fragment).DownloadUrl(true);
+            }
         }
     }
 

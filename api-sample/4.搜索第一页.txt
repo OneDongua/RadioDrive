@@ -1,0 +1,422 @@
+curl ^"https://webbff.qtfm.cn/www^" ^
+  -H ^"Accept: application/json, text/plain, */*^" ^
+  -H ^"Accept-Language: zh-CN,zh;q=0.9,zh-HK;q=0.8,zh-TW;q=0.7,en-US;q=0.6,en-GB;q=0.5,en;q=0.4^" ^
+  -H ^"Connection: keep-alive^" ^
+  -H ^"Content-Type: application/json^" ^
+  -H ^"Origin: https://www.qtfm.cn^" ^
+  -H ^"Referer: https://www.qtfm.cn/^" ^
+  -H ^"Sec-Fetch-Dest: empty^" ^
+  -H ^"Sec-Fetch-Mode: cors^" ^
+  -H ^"Sec-Fetch-Site: same-site^" ^
+  -H ^"User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0^" ^
+  -H ^"sec-ch-ua: ^\^"Microsoft Edge^\^";v=^\^"149^\^", ^\^"Chromium^\^";v=^\^"149^\^", ^\^"Not)A;Brand^\^";v=^\^"24^\^"^" ^
+  -H ^"sec-ch-ua-mobile: ?0^" ^
+  -H ^"sec-ch-ua-platform: ^\^"Windows^\^"^" ^
+  --data-raw ^"^{^\^"query^\^":^\^"^{^\^\n        searchResultsPage(keyword:^\^\^\^"^ ^ ^\^\^\^", page:1, include:^\^\^\^"channel_live^\^\^\^" ) ^{^\^\n          tdk,^\^\n          searchData,^\^\n          numFound^\^\n        ^}^\^\n      ^}^\^"^}^"
+
+return->
+{
+    "data": {
+        "searchResultsPage": {
+            "tdk": {
+                "title": "广东电台-广东相关电台在线听-蜻蜓FM",
+                "keywords": "广东电台,广东相关电台",
+                "description": "蜻蜓FM提供广东的电台、所有电台节目、相关电台广播、相关声音。您可以在线收听所有最新“广东”相关电台节目，也可以下载离线收听。更多广东的最新电台节目，欢迎收听蜻蜓FM。"
+            },
+            "searchData": [
+                {
+                    "id": 1262,
+                    "id_str": "1262",
+                    "title": "广东交通之声",
+                    "type": "channel_live",
+                    "cover": "http://pic.qingting.fm/2025/0311/20250311045956.png",
+                    "updatetime": 1784541624,
+                    "description": "羊城交通台全心打造中国交通广播的“金字招牌”，目前已发展为华南地区影响力最大的交通专业频道，取得了良好的社会效益和经济效益。",
+                    "audience_count": "113.2万",
+                    "mediainfo_id": 1262,
+                    "playcount": "113.2万",
+                    "clout": 12107,
+                    "related_score": 27,
+                    "url_schema": "qingtingfm://app.qingting.fm/webview?show_loading_holder=true&show_navigation_bar=false&show_cute_player=true&url=https%3A%2F%2Fa.qingting.fm%2Flive%2Fchannels%2F1262%3Fappversion%3D",
+                    "expose_id": "1cdfdfd2a379acab",
+                    "expose_ex": {
+                        "primary_id": "1262",
+                        "primary_type": "channel_live",
+                        "source": "es",
+                        "index": 0,
+                        "page": 1,
+                        "k_src": "unknow",
+                        "tab": "channel_live",
+                        "recall_score": 13.399563,
+                        "title": "广东交通之声"
+                    }
+                },
+                {
+                    "id": 469,
+                    "id_str": "469",
+                    "title": "广东城市之声",
+                    "type": "channel_live",
+                    "cover": "http://pic.qingting.fm/2020/0402/20200402042931.png",
+                    "updatetime": 1784541624,
+                    "description": "广东广播电视台城市之声的节目以丰富多样性和都市色彩为特征，每天24小时不停放送，力求多角度、多层面地为广大听众提供高品位的节目欣赏。",
+                    "audience_count": "122.6万",
+                    "mediainfo_id": 469,
+                    "playcount": "122.6万",
+                    "clout": 12004,
+                    "url_schema": "qingtingfm://app.qingting.fm/webview?show_loading_holder=true&show_navigation_bar=false&show_cute_player=true&url=https%3A%2F%2Fa.qingting.fm%2Flive%2Fchannels%2F469%3Fappversion%3D",
+                    "expose_id": "1d9e10d37457388a",
+                    "expose_ex": {
+                        "primary_id": "469",
+                        "primary_type": "channel_live",
+                        "source": "es",
+                        "index": 1,
+                        "page": 1,
+                        "k_src": "unknow",
+                        "tab": "channel_live",
+                        "recall_score": 12.207764,
+                        "title": "广东城市之声"
+                    }
+                },
+                {
+                    "id": 1254,
+                    "id_str": "1254",
+                    "title": "广东新闻广播",
+                    "type": "channel_live",
+                    "cover": "http://pic.qingting.fm/2021/0919/20210919103138.jpeg",
+                    "updatetime": 1784541624,
+                    "description": "广东最有影响力的广播媒体之一，以其鲜明的时政新闻特色被誉为“南中国天空中最有力量的声音”。",
+                    "audience_count": "40.7万",
+                    "mediainfo_id": 1254,
+                    "playcount": "40.7万",
+                    "clout": 6360,
+                    "url_schema": "qingtingfm://app.qingting.fm/webview?show_loading_holder=true&show_navigation_bar=false&show_cute_player=true&url=https%3A%2F%2Fa.qingting.fm%2Flive%2Fchannels%2F1254%3Fappversion%3D",
+                    "expose_id": "52be834f9d72216c",
+                    "expose_ex": {
+                        "primary_id": "1254",
+                        "primary_type": "channel_live",
+                        "source": "es",
+                        "index": 2,
+                        "page": 1,
+                        "k_src": "unknow",
+                        "tab": "channel_live",
+                        "recall_score": 12.207764,
+                        "title": "广东新闻广播"
+                    }
+                },
+                {
+                    "id": 1259,
+                    "id_str": "1259",
+                    "title": "广东珠江经济电台",
+                    "type": "channel_live",
+                    "cover": "http://pic.qingting.fm/2015/0209/20150209212831195.jpg",
+                    "updatetime": 1784541624,
+                    "description": "珠江经济广播电台，FM97.4，官网e974.com, 成立于1986年，中国第一家经济广播电台，华南地区最大型综合广播电台，最有价值的声音。",
+                    "audience_count": "217.0万",
+                    "mediainfo_id": 1259,
+                    "playcount": "217.0万",
+                    "clout": 13330,
+                    "url_schema": "qingtingfm://app.qingting.fm/webview?show_loading_holder=true&show_navigation_bar=false&show_cute_player=true&url=https%3A%2F%2Fa.qingting.fm%2Flive%2Fchannels%2F1259%3Fappversion%3D",
+                    "expose_id": "3edfe79b092166cd",
+                    "expose_ex": {
+                        "primary_id": "1259",
+                        "primary_type": "channel_live",
+                        "source": "es",
+                        "index": 3,
+                        "page": 1,
+                        "k_src": "unknow",
+                        "tab": "channel_live",
+                        "recall_score": 12.207764,
+                        "title": "广东珠江经济电台"
+                    }
+                },
+                {
+                    "id": 1260,
+                    "id_str": "1260",
+                    "title": "广东音乐之声",
+                    "type": "channel_live",
+                    "cover": "http://pic.qingting.fm/sso/198/1564454286057_EAoJdKLRT.jpeg",
+                    "updatetime": 1784541624,
+                    "description": "广东电台音乐之声是一个高品味、全方位的专业音乐电台，其节目在突出欣赏性、娱乐性的同时，兼具新闻、体育、社会生活等各类资讯。",
+                    "audience_count": "64.9万",
+                    "mediainfo_id": 1260,
+                    "playcount": "64.9万",
+                    "clout": 12009,
+                    "url_schema": "qingtingfm://app.qingting.fm/webview?show_loading_holder=true&show_navigation_bar=false&show_cute_player=true&url=https%3A%2F%2Fa.qingting.fm%2Flive%2Fchannels%2F1260%3Fappversion%3D",
+                    "expose_id": "34dc2c02ffb7ca70",
+                    "expose_ex": {
+                        "primary_id": "1260",
+                        "primary_type": "channel_live",
+                        "source": "es",
+                        "index": 4,
+                        "page": 1,
+                        "k_src": "unknow",
+                        "tab": "channel_live",
+                        "recall_score": 12.207764,
+                        "title": "广东音乐之声"
+                    }
+                },
+                {
+                    "id": 468,
+                    "id_str": "468",
+                    "title": "广东南方生活广播",
+                    "type": "channel_live",
+                    "cover": "http://pic.qingting.fm/2021/0519/20210519030711.jpeg",
+                    "updatetime": 1784541624,
+                    "description": "南方生活广播是广东广播电视台频率之一，作为华南地区唯一一家以“传播岭南文化、倡导健康生活”为定位，以中老年群体为目标受众的省级电台。",
+                    "audience_count": "29.2万",
+                    "mediainfo_id": 468,
+                    "playcount": "29.2万",
+                    "clout": 4640,
+                    "url_schema": "qingtingfm://app.qingting.fm/webview?show_loading_holder=true&show_navigation_bar=false&show_cute_player=true&url=https%3A%2F%2Fa.qingting.fm%2Flive%2Fchannels%2F468%3Fappversion%3D",
+                    "expose_id": "26e3df8bc29ac830",
+                    "expose_ex": {
+                        "primary_id": "468",
+                        "primary_type": "channel_live",
+                        "source": "es",
+                        "index": 5,
+                        "page": 1,
+                        "k_src": "unknow",
+                        "tab": "channel_live",
+                        "recall_score": 9.63647,
+                        "title": "广东南方生活广播"
+                    }
+                },
+                {
+                    "id": 470,
+                    "id_str": "470",
+                    "title": "广东广播电视台珠江之声",
+                    "type": "channel_live",
+                    "cover": "http://pic.qtfm.cn/2022/0729/20220729092142.jpeg!200",
+                    "updatetime": 1784541624,
+                    "description": "中国首家跨境广播 珠江之声面向粤港澳三地，定位“声动大湾区”，宣传党和国家大政方针，展示粤港澳大湾区建设发展成就，为广大群众提供丰富优质的信息资讯服务。",
+                    "audience_count": "11.3万",
+                    "mediainfo_id": 470,
+                    "playcount": "11.3万",
+                    "clout": 3676,
+                    "url_schema": "qingtingfm://app.qingting.fm/webview?show_loading_holder=true&show_navigation_bar=false&show_cute_player=true&url=https%3A%2F%2Fa.qingting.fm%2Flive%2Fchannels%2F470%3Fappversion%3D",
+                    "expose_id": "32dc99ae61cbd142",
+                    "expose_ex": {
+                        "primary_id": "470",
+                        "primary_type": "channel_live",
+                        "source": "es",
+                        "index": 6,
+                        "page": 1,
+                        "k_src": "unknow",
+                        "tab": "channel_live",
+                        "recall_score": 9.004286,
+                        "title": "广东广播电视台珠江之声"
+                    }
+                },
+                {
+                    "id": 471,
+                    "id_str": "471",
+                    "title": "广东广播电视台文体广播",
+                    "type": "channel_live",
+                    "cover": "http://pic.qingting.fm/sso/198/1567411393720_vdCUW70Lt.jpeg",
+                    "updatetime": 1784541624,
+                    "description": "广东文体广播，完美地将文化娱乐与体育相结合，是华南第一家都会型具有鲜明文化、体育特色的专业电台，为听众提供最新、最快的文化、体育、生活、娱乐、音乐等信息。虽然作为广播的一支新生力量，但却拥有一支团结、新锐、战斗旺盛的团队。",
+                    "audience_count": "29.4万",
+                    "mediainfo_id": 471,
+                    "playcount": "29.4万",
+                    "clout": 5352,
+                    "url_schema": "qingtingfm://app.qingting.fm/webview?show_loading_holder=true&show_navigation_bar=false&show_cute_player=true&url=https%3A%2F%2Fa.qingting.fm%2Flive%2Fchannels%2F471%3Fappversion%3D",
+                    "expose_id": "1fed6559be56d457",
+                    "expose_ex": {
+                        "primary_id": "471",
+                        "primary_type": "channel_live",
+                        "source": "es",
+                        "index": 7,
+                        "page": 1,
+                        "k_src": "unknow",
+                        "tab": "channel_live",
+                        "recall_score": 9.004286,
+                        "title": "广东广播电视台文体广播"
+                    }
+                },
+                {
+                    "id": 15318569,
+                    "id_str": "15318569",
+                    "title": "AsiaFM 亚洲粤语台",
+                    "type": "channel_live",
+                    "cover": "http://pic.qtfm.cn/2022/1019/20221019042732.jpeg!200",
+                    "updatetime": 1784541606,
+                    "description": "AsiaFM亚洲粤语台  最爱广东歌\n亚洲地区经典粤语台，港乐内容交流平台！\n官方微博：AsiaFM亚洲音乐台  FANS QQ群：14187200",
+                    "audience_count": "47.7万",
+                    "mediainfo_id": 15318569,
+                    "playcount": "47.7万",
+                    "clout": 6887,
+                    "url_schema": "qingtingfm://app.qingting.fm/webview?show_loading_holder=true&show_navigation_bar=false&show_cute_player=true&url=https%3A%2F%2Fa.qingting.fm%2Flive%2Fchannels%2F15318569%3Fappversion%3D",
+                    "expose_id": "2be5f02b4c2388ba",
+                    "expose_ex": {
+                        "primary_id": "15318569",
+                        "primary_type": "channel_live",
+                        "source": "es",
+                        "index": 8,
+                        "page": 1,
+                        "k_src": "unknow",
+                        "tab": "channel_live",
+                        "recall_score": 7.807483,
+                        "title": "AsiaFM 亚洲粤语台"
+                    }
+                },
+                {
+                    "id": 20500163,
+                    "id_str": "20500163",
+                    "title": "湾区音乐台",
+                    "type": "channel_live",
+                    "cover": "http://pic.qtfm.cn/2023/0710/20230710050911.jpeg!200",
+                    "updatetime": 1784541605,
+                    "description": "立足大湾区，力撑广东歌，并囊括各种音乐类型，只有想不到，没有听不到！开放办电台、欢迎主播加入或内容建议，可以联系本台主理人：VX号 1046420595",
+                    "audience_count": "1.4万",
+                    "mediainfo_id": 20500163,
+                    "playcount": "1.4万",
+                    "clout": 1633,
+                    "url_schema": "qingtingfm://app.qingting.fm/webview?show_loading_holder=true&show_navigation_bar=false&show_cute_player=true&url=https%3A%2F%2Fa.qingting.fm%2Flive%2Fchannels%2F20500163%3Fappversion%3D",
+                    "expose_id": "459a9fd4aa62c15c",
+                    "expose_ex": {
+                        "primary_id": "20500163",
+                        "primary_type": "channel_live",
+                        "source": "es",
+                        "index": 9,
+                        "page": 1,
+                        "k_src": "unknow",
+                        "tab": "channel_live",
+                        "recall_score": 7.350105,
+                        "title": "湾区音乐台"
+                    }
+                },
+                {
+                    "id": 4595,
+                    "id_str": "4595",
+                    "title": "潮州戏曲广播",
+                    "type": "channel_live",
+                    "cover": "http://pic.qingting.fm/2015/0427/20150427150246450.jpg",
+                    "updatetime": 1784541622,
+                    "description": "FM103.1兆赫的潮州人民广播电台戏曲之声正式开播于2004年10月1日，是继浙江绍兴电台开播后的全国第二家、广东省第一家戏曲频率，以潮州戏曲作为主线，每天16小时播音。",
+                    "audience_count": "15.2万",
+                    "mediainfo_id": 4595,
+                    "playcount": "15.2万",
+                    "clout": 3249,
+                    "url_schema": "qingtingfm://app.qingting.fm/webview?show_loading_holder=true&show_navigation_bar=false&show_cute_player=true&url=https%3A%2F%2Fa.qingting.fm%2Flive%2Fchannels%2F4595%3Fappversion%3D",
+                    "expose_id": "6aef01d5ae2e04d4",
+                    "expose_ex": {
+                        "primary_id": "4595",
+                        "primary_type": "channel_live",
+                        "source": "es",
+                        "index": 10,
+                        "page": 1,
+                        "k_src": "unknow",
+                        "tab": "channel_live",
+                        "recall_score": 6.1999507,
+                        "title": "潮州戏曲广播"
+                    }
+                },
+                {
+                    "id": 20500213,
+                    "id_str": "20500213",
+                    "title": "肇庆高新区广播",
+                    "type": "channel_live",
+                    "cover": "http://pic.qtfm.cn/sso/48/1712027454972_KusoeWYpG.png!200",
+                    "updatetime": 1784541605,
+                    "description": "肇庆国家高新区广播电台是经广东省广播电视局批准的调频广播，发射频率99.9MHZ，于2016年7月开播。传输节目内容包括肇庆高新区广播电视中心自办新闻、专题节目，转播中央广播电台新闻、肇庆广播电台新闻等。",
+                    "audience_count": "6639",
+                    "mediainfo_id": 20500213,
+                    "playcount": "6639",
+                    "clout": 1262,
+                    "url_schema": "qingtingfm://app.qingting.fm/webview?show_loading_holder=true&show_navigation_bar=false&show_cute_player=true&url=https%3A%2F%2Fa.qingting.fm%2Flive%2Fchannels%2F20500213%3Fappversion%3D",
+                    "expose_id": "327d7a56d83a55ef",
+                    "expose_ex": {
+                        "primary_id": "20500213",
+                        "primary_type": "channel_live",
+                        "source": "es",
+                        "index": 11,
+                        "page": 1,
+                        "k_src": "unknow",
+                        "tab": "channel_live",
+                        "recall_score": 6.002218,
+                        "title": "肇庆高新区广播"
+                    }
+                },
+                {
+                    "id": 5042,
+                    "id_str": "5042",
+                    "title": "钦州新闻综合广播",
+                    "type": "channel_live",
+                    "cover": "http://pic.qingting.fm/2013/channel_logo/5042.jpg",
+                    "updatetime": 1784541618,
+                    "description": "电台依托桂南沿海最高峰那雾岭的差转，其中新闻综合广播播出频率为FM98.6兆赫（发射功率达5千瓦），音乐广播播出频率为FM88.9兆赫（发射功率达3千瓦），信号清晰覆盖钦州、北海、防城港三市以及玉林博白、南宁的邕宁、广东的湛江遂溪、廉江等部分地区，覆盖人口1000多万，在各覆盖区域网络了一大批收听群体。",
+                    "audience_count": "4462",
+                    "mediainfo_id": 5042,
+                    "playcount": "4462",
+                    "clout": 1111,
+                    "url_schema": "qingtingfm://app.qingting.fm/webview?show_loading_holder=true&show_navigation_bar=false&show_cute_player=true&url=https%3A%2F%2Fa.qingting.fm%2Flive%2Fchannels%2F5042%3Fappversion%3D",
+                    "expose_id": "55d521b0da383cf2",
+                    "expose_ex": {
+                        "primary_id": "5042",
+                        "primary_type": "channel_live",
+                        "source": "es",
+                        "index": 12,
+                        "page": 1,
+                        "k_src": "unknow",
+                        "tab": "channel_live",
+                        "recall_score": 4.6636014,
+                        "title": "钦州新闻综合广播"
+                    }
+                },
+                {
+                    "id": 1257,
+                    "id_str": "1257",
+                    "title": "梅州广播电视台综合广播",
+                    "type": "channel_live",
+                    "cover": "http://pic.qtfm.cn/2022/1016/20221016105318.jpeg!200",
+                    "updatetime": 1784541624,
+                    "description": "这里是梅州广播电视台综合广播。",
+                    "audience_count": "2.0万",
+                    "mediainfo_id": 1257,
+                    "playcount": "2.0万",
+                    "clout": 1500,
+                    "url_schema": "qingtingfm://app.qingting.fm/webview?show_loading_holder=true&show_navigation_bar=false&show_cute_player=true&url=https%3A%2F%2Fa.qingting.fm%2Flive%2Fchannels%2F1257%3Fappversion%3D",
+                    "expose_id": "5512471803f09661",
+                    "expose_ex": {
+                        "primary_id": "1257",
+                        "primary_type": "channel_live",
+                        "source": "es",
+                        "index": 13,
+                        "page": 1,
+                        "k_src": "unknow",
+                        "tab": "channel_live",
+                        "recall_score": 4.2371616,
+                        "title": "梅州广播电视台综合广播"
+                    }
+                },
+                {
+                    "id": 1258,
+                    "id_str": "1258",
+                    "title": "梅州电台交通广播",
+                    "type": "channel_live",
+                    "cover": "http://pic.qtfm.cn/2024/0821/20240821111520.jpeg!200",
+                    "updatetime": 1784541624,
+                    "description": "FM105.8梅州交通广播是梅州首家交通服务专业广播电台，2011年开播，每天6:15~24:00播出，覆盖梅州城区及周边主要交通道路，提供交通信息服务，收听率和市场份额多年均在梅州排名第一。",
+                    "audience_count": "8388",
+                    "mediainfo_id": 1258,
+                    "playcount": "8388",
+                    "clout": 1203,
+                    "url_schema": "qingtingfm://app.qingting.fm/webview?show_loading_holder=true&show_navigation_bar=false&show_cute_player=true&url=https%3A%2F%2Fa.qingting.fm%2Flive%2Fchannels%2F1258%3Fappversion%3D",
+                    "expose_id": "0971e7d0026f3657",
+                    "expose_ex": {
+                        "primary_id": "1258",
+                        "primary_type": "channel_live",
+                        "source": "es",
+                        "index": 14,
+                        "page": 1,
+                        "k_src": "unknow",
+                        "tab": "channel_live",
+                        "recall_score": 4.2371616,
+                        "title": "梅州电台交通广播"
+                    }
+                }
+            ],
+            "numFound": 63
+        }
+    }
+}
