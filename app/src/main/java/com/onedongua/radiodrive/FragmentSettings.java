@@ -255,6 +255,9 @@ public class FragmentSettings extends PreferenceFragmentCompat implements Shared
             }
         }
         if (key.equals("radio_data_source")) {
+            RadioDroidApp app = (RadioDroidApp) getActivity().getApplication();
+            app.getFavouriteManager().Load();
+            app.getHistoryManager().Load();
             getActivity().recreate();
         }
         if (key.equals("theme_name") || key.equals("circular_icons") || key.equals("bottom_navigation")) {

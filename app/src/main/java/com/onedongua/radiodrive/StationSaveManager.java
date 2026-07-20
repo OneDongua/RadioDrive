@@ -43,6 +43,11 @@ public class StationSaveManager extends Observable {
     Context context;
     List<DataRadioStation> listStations = new ArrayList<DataRadioStation>();
 
+    /**
+     * Load() 时缓存的 saveId，确保 Save() 始终写入与 Load() 相同的 key
+     */
+    private String loadedSaveId = null;
+
     protected StationStatusListener stationStatusListener;
 
     public StationSaveManager(Context ctx) {
@@ -52,6 +57,18 @@ public class StationSaveManager extends Observable {
 
     protected String getSaveId() {
         return "default";
+    }
+
+    /**
+     * 检查数据源是否已切换（loadedSaveId 与当前 getSaveId() 不一致），
+     * 若已切换则重新加载。由 FragmentStarred / FragmentHistory 在 onCreateView 时调用，
+     * 确保显示的数据与当前数据源一致。
+     */
+    public void reloadIfSourceChanged() {
+        String currentId = getSaveId();
+        if (!currentId.equals(loadedSaveId)) {
+            Load();
+        }
     }
 
     protected void setStationStatusListener(StationStatusListener stationStatusListener) {
@@ -308,11 +325,14 @@ public class StationSaveManager extends Observable {
         }.execute();
     }
 
-    void Load() {
+    public void Load() {
         listStations.clear();
 
+        // 缓存当前 saveId，确保后续 Save() 写入同一个 key
+        loadedSaveId = getSaveId();
+
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-        String str = sharedPref.getString(getSaveId(), null);
+        String str = sharedPref.getString(loadedSaveId, null);
         if (str != null) {
             List<DataRadioStation> arr = DataRadioStation.DecodeJson(str);
             for (DataRadioStation station : arr) {
@@ -339,7 +359,9 @@ public class StationSaveManager extends Observable {
         if (BuildConfig.DEBUG) {
             Log.d("SAVE", "wrote: " + str);
         }
-        editor.putString(getSaveId(), str);
+        // 使用 Load() 时缓存的 key，防止 getSaveId() 动态变化导致写入错误的 key
+        String saveKey = (loadedSaveId != null) ? loadedSaveId : getSaveId();
+        editor.putString(saveKey, str);
         editor.commit();
     }
 

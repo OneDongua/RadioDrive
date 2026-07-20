@@ -61,6 +61,7 @@ public class FragmentHistory extends Fragment implements IAdapterRefreshable {
                              Bundle savedInstanceState) {
         RadioDroidApp radioDroidApp = (RadioDroidApp) getActivity().getApplication();
         historyManager = radioDroidApp.getHistoryManager();
+        historyManager.reloadIfSourceChanged();
 
         ItemAdapterStation adapter = new ItemAdapterStation(getActivity(), R.layout.list_item_station, StationsFilter.FilterType.LOCAL);
         adapter.setStationActionsListener(new ItemAdapterStation.StationActionsListener() {
@@ -133,7 +134,20 @@ public class FragmentHistory extends Fragment implements IAdapterRefreshable {
     }
 
     void RefreshDownloadList() {
+        // 仅在 RadioBrowser 源时才从服务端刷新，蜻蜓FM 等外部源无此 API
         RadioDroidApp radioDroidApp = (RadioDroidApp) getActivity().getApplication();
+        try {
+            com.onedongua.radiodrive.source.RadioDataSource source =
+                    com.onedongua.radiodrive.source.RadioDataSourceManager.getInstance().getCurrentSource();
+            if (!"radiobrowser".equals(source.getSourceType())) {
+                if (swipeRefreshLayout != null) swipeRefreshLayout.setRefreshing(false);
+                return;
+            }
+        } catch (Exception e) {
+            if (swipeRefreshLayout != null) swipeRefreshLayout.setRefreshing(false);
+            return;
+        }
+
         final OkHttpClient httpClient = radioDroidApp.getHttpClient();
         ArrayList<String> listUUids = new ArrayList<String>();
         for (DataRadioStation station : historyManager.listStations) {

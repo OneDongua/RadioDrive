@@ -53,7 +53,7 @@ public class FavouriteManager extends StationSaveManager {
     }
 
     @Override
-    void Load() {
+    public void Load() {
         super.Load();
         updateShortcuts();
     }

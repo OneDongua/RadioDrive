@@ -176,12 +176,16 @@ public class QingtingDataSource implements RadioDataSource {
         station.IconUrl = item.imgUrl;
         station.ClickCount = item.playcount;
         station.Votes = item.clout;
-        station.HomePageUrl = item.desc;
+        station.HomePageUrl = item.desc != null ? item.desc : "";
         station.TagsAll = "";
+        station.Country = "";
+        station.Language = "";
         station.Working = true;
         station.CountryCode = SOURCE_TYPE; // 标记来源
         if (item.podcaster != null) {
             station.State = item.podcaster.username;
+        } else {
+            station.State = "";
         }
         return station;
     }
@@ -192,8 +196,12 @@ public class QingtingDataSource implements RadioDataSource {
         station.StationUuid = String.valueOf(item.id);
         station.IconUrl = item.cover;
         station.ClickCount = item.clout;
-        station.HomePageUrl = item.description;
+        station.Votes = 0;
+        station.HomePageUrl = item.description != null ? item.description : "";
         station.TagsAll = "";
+        station.Country = "";
+        station.Language = "";
+        station.State = "";
         station.Working = true;
         station.CountryCode = SOURCE_TYPE;
         return station;
@@ -204,11 +212,15 @@ public class QingtingDataSource implements RadioDataSource {
         station.Name = obj.optString("name", obj.optString("channelTitle", ""));
         station.StationUuid = extractChannelId(obj.optString("to", ""));
         station.IconUrl = QingtingModels.fixImageUrl(obj.optString("imgUrl"));
-        station.HomePageUrl = obj.optString("desc");
+        station.HomePageUrl = obj.optString("desc", "");
         station.TagsAll = "";
+        station.Country = "";
+        station.Language = "";
+        station.State = "";
         station.Working = true;
         station.CountryCode = SOURCE_TYPE;
         station.ClickCount = obj.optInt("playcount");
+        station.Votes = 0;
         return station;
     }
 

@@ -141,53 +141,36 @@ public class DataRadioStation implements Parcelable {
                             JSONObject anObject = jsonArray.getJSONObject(i);
 
                             DataRadioStation aStation = new DataRadioStation();
-                            aStation.Name = anObject.getString("name");
-                            aStation.StreamUrl = "";
-                            if (anObject.has("url")) {
-                                aStation.StreamUrl = anObject.getString("url");
-                            }
-                            if (anObject.has("stationuuid")) {
-                                aStation.StationUuid = anObject.getString("stationuuid");
-                            }
+                            aStation.Name = anObject.optString("name", "");
+                            aStation.StreamUrl = anObject.optString("url", "");
+                            aStation.StationUuid = anObject.optString("stationuuid", "");
+
                             if (!aStation.hasValidUuid()) {
-                                aStation.StationId = anObject.getString("id");
+                                aStation.StationId = anObject.optString("id", "");
                             }
-                            if (anObject.has("changeuuid")) {
-                                aStation.ChangeUuid = anObject.getString("changeuuid");
-                            }
-                            aStation.Votes = anObject.getInt("votes");
-                            if (anObject.has("refreshretrycount")) {
-                                aStation.RefreshRetryCount = anObject.getInt("refreshretrycount");
-                            } else {
-                                aStation.RefreshRetryCount = 0;
-                            }
-                            aStation.HomePageUrl = anObject.getString("homepage");
-                            aStation.TagsAll = anObject.getString("tags");
-                            aStation.Country = anObject.getString("country");
-                            if (anObject.has("countrycode")) {
-                                aStation.CountryCode = anObject.getString("countrycode");
-                            }
-                            aStation.State = anObject.getString("state");
-                            aStation.IconUrl = anObject.getString("favicon");
-                            aStation.Language = anObject.getString("language");
-                            aStation.ClickCount = anObject.getInt("clickcount");
-                            if (anObject.has("clicktrend")) {
-                                aStation.ClickTrend = anObject.getInt("clicktrend");
-                            }
-                            if (anObject.has("bitrate")) {
-                                aStation.Bitrate = anObject.getInt("bitrate");
-                            }
-                            if (anObject.has("codec")) {
-                                aStation.Codec = anObject.getString("codec");
-                            }
+                            aStation.ChangeUuid = anObject.optString("changeuuid", "");
+                            aStation.Votes = anObject.optInt("votes", 0);
+                            aStation.RefreshRetryCount = anObject.optInt("refreshretrycount", 0);
+                            aStation.HomePageUrl = anObject.optString("homepage", "");
+                            aStation.TagsAll = anObject.optString("tags", "");
+                            aStation.Country = anObject.optString("country", "");
+                            aStation.CountryCode = anObject.optString("countrycode", "");
+                            aStation.State = anObject.optString("state", "");
+                            aStation.IconUrl = anObject.optString("favicon", "");
+                            aStation.Language = anObject.optString("language", "");
+                            aStation.ClickCount = anObject.optInt("clickcount", 0);
+                            aStation.ClickTrend = anObject.optInt("clicktrend", 0);
+                            aStation.Bitrate = anObject.optInt("bitrate", 0);
+                            aStation.Codec = anObject.optString("codec", "");
+
                             if (anObject.has("lastcheckok")) {
-                                aStation.Working = anObject.getInt("lastcheckok") != 0;
+                                aStation.Working = anObject.optInt("lastcheckok", 1) != 0;
                             }
                             if (anObject.has("hls")) {
-                                aStation.Hls = anObject.getInt("hls") != 0;
+                                aStation.Hls = anObject.optInt("hls", 0) != 0;
                             }
                             if (anObject.has("DeletedOnServer")) {
-                                aStation.DeletedOnServer = anObject.getInt("DeletedOnServer") != 0;
+                                aStation.DeletedOnServer = anObject.optInt("DeletedOnServer", 0) != 0;
                             }
 
                             aStation.fixStationFields();
@@ -213,50 +196,33 @@ public class DataRadioStation implements Parcelable {
                     JSONObject anObject = new JSONObject(result);
 
                     DataRadioStation aStation = new DataRadioStation();
-                    aStation.Name = anObject.getString("name");
-                    aStation.StreamUrl = "";
-                    if (anObject.has("url")) {
-                        aStation.StreamUrl = anObject.getString("url");
-                    }
-                    if (anObject.has("stationuuid")) {
-                        aStation.StationUuid = anObject.getString("stationuuid");
-                    }
+                    aStation.Name = anObject.optString("name", "");
+                    aStation.StreamUrl = anObject.optString("url", "");
+                    aStation.StationUuid = anObject.optString("stationuuid", "");
+
                     if (!aStation.hasValidUuid()) {
-                        aStation.StationId = anObject.getString("id");
+                        aStation.StationId = anObject.optString("id", "");
                     }
-                    if (anObject.has("changeuuid")) {
-                        aStation.ChangeUuid = anObject.getString("changeuuid");
-                    }
-                    aStation.Votes = anObject.getInt("votes");
-                    if (anObject.has("refreshretrycount")) {
-                        aStation.RefreshRetryCount = anObject.getInt("refreshretrycount");
-                    } else {
-                        aStation.RefreshRetryCount = 0;
-                    }
-                    aStation.HomePageUrl = anObject.getString("homepage");
-                    aStation.TagsAll = anObject.getString("tags");
-                    aStation.Country = anObject.getString("country");
-                    if (anObject.has("countrycode")) {
-                        aStation.CountryCode = anObject.getString("countrycode");
-                    }
-                    aStation.State = anObject.getString("state");
-                    aStation.IconUrl = anObject.getString("favicon");
-                    aStation.Language = anObject.getString("language");
-                    aStation.ClickCount = anObject.getInt("clickcount");
-                    if (anObject.has("clicktrend")) {
-                        aStation.ClickTrend = anObject.getInt("clicktrend");
-                    }
-                    if (anObject.has(("bitrate"))) {
-                        aStation.Bitrate = anObject.getInt("bitrate");
-                    }
-                    if (anObject.has("codec")) {
-                        aStation.Codec = anObject.getString("codec");
-                    }
+                    aStation.ChangeUuid = anObject.optString("changeuuid", "");
+                    aStation.Votes = anObject.optInt("votes", 0);
+                    aStation.RefreshRetryCount = anObject.optInt("refreshretrycount", 0);
+                    aStation.HomePageUrl = anObject.optString("homepage", "");
+                    aStation.TagsAll = anObject.optString("tags", "");
+                    aStation.Country = anObject.optString("country", "");
+                    aStation.CountryCode = anObject.optString("countrycode", "");
+                    aStation.State = anObject.optString("state", "");
+                    aStation.IconUrl = anObject.optString("favicon", "");
+                    aStation.Language = anObject.optString("language", "");
+                    aStation.ClickCount = anObject.optInt("clickcount", 0);
+                    aStation.ClickTrend = anObject.optInt("clicktrend", 0);
+                    aStation.Bitrate = anObject.optInt("bitrate", 0);
+                    aStation.Codec = anObject.optString("codec", "");
+
                     if (anObject.has("lastcheckok")) {
-                        aStation.Working = anObject.getInt("lastcheckok") != 0;
+                        aStation.Working = anObject.optInt("lastcheckok", 1) != 0;
                     }
                     if (anObject.has("DeletedOnServer")) {
-                        aStation.DeletedOnServer = anObject.getInt("DeletedOnServer") != 0;
+                        aStation.DeletedOnServer = anObject.optInt("DeletedOnServer", 0) != 0;
                     }
 
                     aStation.fixStationFields();

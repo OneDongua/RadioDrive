@@ -65,6 +65,7 @@ public class FragmentStarred extends Fragment implements IAdapterRefreshable, Ob
 
         RadioDroidApp radioDroidApp = (RadioDroidApp) requireActivity().getApplication();
         favouriteManager = radioDroidApp.getFavouriteManager();
+        favouriteManager.reloadIfSourceChanged();
         favouriteManager.addObserver(this);
 
         // Inflate the layout for this fragment
@@ -143,7 +144,20 @@ public class FragmentStarred extends Fragment implements IAdapterRefreshable, Ob
     }
 
     void RefreshDownloadList() {
+        // 仅在 RadioBrowser 源时才从服务端刷新，蜻蜓FM 等外部源无此 API
         RadioDroidApp radioDroidApp = (RadioDroidApp) getActivity().getApplication();
+        try {
+            com.onedongua.radiodrive.source.RadioDataSource source =
+                    com.onedongua.radiodrive.source.RadioDataSourceManager.getInstance().getCurrentSource();
+            if (!"radiobrowser".equals(source.getSourceType())) {
+                if (swipeRefreshLayout != null) swipeRefreshLayout.setRefreshing(false);
+                return;
+            }
+        } catch (Exception e) {
+            if (swipeRefreshLayout != null) swipeRefreshLayout.setRefreshing(false);
+            return;
+        }
+
         final OkHttpClient httpClient = radioDroidApp.getHttpClient();
         ArrayList<String> listUUids = new ArrayList<String>();
         for (DataRadioStation station : favouriteManager.listStations) {
