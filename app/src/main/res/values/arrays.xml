@@ -63,7 +63,7 @@
 
     <string-array name="data_source_entries">
         <item>RadioBrowser</item>
-        <item>蜻蜓FM</item>
+        <item>蜻蜓 FM (CN)</item>
     </string-array>
     <string-array name="data_source_values">
         <item>radiobrowser</item>
