@@ -42,9 +42,6 @@ public class FragmentQingtingStations extends Fragment implements IFragmentSearc
 
     public static final String KEY_MODE = "mode";
     public static final String KEY_CATEGORY_ID = "categoryId";
-    /**
-     * @deprecated 保留供 FragmentQingtingCategories 引用，本 Fragment 不再使用
-     */
     public static final String KEY_CATEGORY_TYPE = "categoryType";
 
     private RecyclerView rvStations;

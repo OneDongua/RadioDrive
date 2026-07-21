@@ -534,7 +534,9 @@ public class ItemAdapterStation
     private void setupCompactStyle(final StationViewHolder holder) {
         holder.layoutMain.setMinimumHeight((int) getContext().getResources().getDimension(R.dimen.compact_style_item_minimum_height));
         holder.frameLayout.getLayoutParams().width = (int) getContext().getResources().getDimension(R.dimen.compact_style_icon_container_width);
+        holder.frameLayout.getLayoutParams().height = (int) getContext().getResources().getDimension(R.dimen.compact_style_icon_container_width);
         holder.imageViewIcon.getLayoutParams().width = (int) getContext().getResources().getDimension(R.dimen.compact_style_icon_width);
+        holder.imageViewIcon.getLayoutParams().height = (int) getContext().getResources().getDimension(R.dimen.compact_style_icon_height);
 
         holder.textViewShortDescription.setVisibility(View.GONE);
         if (holder.transparentImageView.getVisibility() == View.VISIBLE) {

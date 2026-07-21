@@ -46,6 +46,7 @@ import com.bytehamster.lib.preferencesearch.SearchPreferenceResultListener;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.mikepenz.iconics.Iconics;
@@ -114,7 +115,7 @@ public class ActivityMain extends AppCompatActivity implements SearchView.OnQuer
 
     DrawerLayout mDrawerLayout;
     NavigationView mNavigationView;
-    BottomNavigationView mBottomNavigationView;
+    NavigationBarView mBottomNavigationView;
     FragmentManager mFragmentManager;
 
     private BottomSheetBehavior playerBottomSheet;
@@ -193,7 +194,7 @@ public class ActivityMain extends AppCompatActivity implements SearchView.OnQuer
         mBottomNavigationView = findViewById(R.id.bottom_navigation);
 
         if (Utils.bottomNavigationEnabled(this)) {
-            mBottomNavigationView.setOnNavigationItemSelectedListener(this);
+            mBottomNavigationView.setOnItemSelectedListener(this);
             mNavigationView.setVisibility(View.GONE);
             mNavigationView.getLayoutParams().width = 0;
         } else {
@@ -593,9 +594,9 @@ public class ActivityMain extends AppCompatActivity implements SearchView.OnQuer
 
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                if (Utils.bottomNavigationEnabled(ActivityMain.this)) {
+                /*if (Utils.bottomNavigationEnabled(ActivityMain.this)) {
                     mBottomNavigationView.setVisibility(hasFocus ? View.GONE : View.VISIBLE);
-                }
+                }*/
 
                 if (hasFocus) {
                     prevTabsVisibility = tabsView.getVisibility();
