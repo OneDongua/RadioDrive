@@ -156,9 +156,7 @@ public class QingtingDataSource implements RadioDataSource {
         if (station == null) return null;
         String uuid = station.StationUuid;
         if (TextUtils.isEmpty(uuid)) return null;
-        // 直接构造播放链接，无需签名参数
-        // 未来如需签名: 需从客户端JS中提取 ts/sign 生成逻辑
-        return QingtingModels.PLAY_URL_PREFIX + uuid + QingtingModels.PLAY_URL_SUFFIX;
+        return QingtingUrlSigner.buildLiveUrl(uuid);
     }
 
     @Override

@@ -235,9 +235,8 @@ public class Utils {
                 com.onedongua.radiodrive.source.RadioDataSourceManager mgr =
                         com.onedongua.radiodrive.source.RadioDataSourceManager.getInstance();
                 if ("qingting".equals(mgr.getCurrentSource().getSourceType())) {
-                    // 蜻蜓FM播放URL，无需签名参数
-                    return com.onedongua.radiodrive.source.qingting.QingtingModels.PLAY_URL_PREFIX
-                            + stationId + com.onedongua.radiodrive.source.qingting.QingtingModels.PLAY_URL_SUFFIX;
+                    return com.onedongua.radiodrive.source.qingting.QingtingUrlSigner
+                            .buildLiveUrl(stationId);
                 }
             } catch (Exception ignored) {
             }
