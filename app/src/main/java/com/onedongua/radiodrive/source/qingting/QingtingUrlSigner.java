@@ -24,8 +24,10 @@ public final class QingtingUrlSigner {
      * Builds a signed URL using the current Unix timestamp.
      */
     public static String buildLiveUrl(String channelId) {
-        long nowSeconds = System.currentTimeMillis() / 1000L;
-        return buildLiveUrl(channelId, nowSeconds);
+        //signed
+        //long nowSeconds = System.currentTimeMillis() / 1000L;
+        //return buildLiveUrl(channelId, nowSeconds);
+        return QingtingModels.PLAY_URL_PREFIX + channelId + QingtingModels.PLAY_URL_SUFFIX;
     }
 
     /**
