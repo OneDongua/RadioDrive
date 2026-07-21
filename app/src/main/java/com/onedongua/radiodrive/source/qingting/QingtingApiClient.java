@@ -215,12 +215,19 @@ public class QingtingApiClient {
     }
 
     /**
-     * 获取搜索结果总数
+     * 获取搜索结果总数。
+     * 搜索响应结构: { data: { searchResultsPage: { numFound: 123 } } }
+     * 需要先找到 searchResultsPage 对象再读取 numFound。
      */
     public int parseSearchTotalCount(GraphQLResponse response) {
         try {
             JSONObject data = response.getDataObject();
             if (data == null) return 0;
+            JSONObject searchPage = findJsonObject(data, "searchResultsPage");
+            if (searchPage != null) {
+                return searchPage.optInt("numFound", 0);
+            }
+            // 回退：尝试直接在 data 层级读取
             return data.optInt("numFound", 0);
         } catch (Exception e) {
             Log.e(TAG, "parseSearchTotalCount error", e);
