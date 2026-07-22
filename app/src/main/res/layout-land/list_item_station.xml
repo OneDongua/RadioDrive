@@ -17,6 +17,7 @@
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
             android:layout_gravity="center_vertical"
             android:background="@android:color/white"
             android:measureAllChildren="true">
