@@ -90,6 +90,7 @@
                 android:lines="1"
                 android:scrollbars="none"
                 android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
             <TextView
@@ -98,6 +99,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
                 android:lines="1"
                 android:scrollbars="none"
                 android:textColor="@color/textColorSecondary"
