@@ -1,6 +1,8 @@
 package com.onedongua.radiodrive.source.qingting;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,7 +31,7 @@ import java.util.List;
  * 点击后跳转到 FragmentQingtingStations 显示对应电台。
  */
 public class FragmentQingtingCategories extends Fragment {
-    private static final String TAG = "FragmentQingtingCategories";
+    private static final String TAG = "FragmentQtCategories";
 
     public static final String KEY_CATEGORY_TYPE = "categoryType";
     public static final String TYPE_REGIONS = "regions";
@@ -40,6 +42,7 @@ public class FragmentQingtingCategories extends Fragment {
     private ItemAdapterCategory adapter;
     private RadioDataSource.CategoryType categoryType;
     private List<DataCategory> categories = new ArrayList<>();
+    private final Handler mainHandler = new Handler(Looper.getMainLooper());
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -78,16 +81,23 @@ public class FragmentQingtingCategories extends Fragment {
         manager.getCurrentSource().getCategories(categoryType, new RadioDataSource.CategoryCallback() {
             @Override
             public void onResult(List<DataCategory> categories) {
-                if (swipeRefreshLayout != null) swipeRefreshLayout.setRefreshing(false);
+                if (swipeRefreshLayout != null) {
+                    mainHandler.post(() ->
+                            swipeRefreshLayout.setRefreshing(false));
+                }
                 FragmentQingtingCategories.this.categories = categories;
                 if (rvCategories != null) rvCategories.post(() -> adapter.updateList(categories));
             }
 
             @Override
             public void onError(Exception e) {
-                if (swipeRefreshLayout != null) swipeRefreshLayout.setRefreshing(false);
+                if (swipeRefreshLayout != null) {
+                    mainHandler.post(() ->
+                            swipeRefreshLayout.setRefreshing(false));
+                }
                 if (getContext() != null) {
-                    Toast.makeText(getContext(), R.string.error_list_update, Toast.LENGTH_SHORT).show();
+                    mainHandler.post(() ->
+                            Toast.makeText(getContext(), R.string.error_list_update, Toast.LENGTH_SHORT).show());
                 }
                 Log.e(TAG, "loadCategories error", e);
             }

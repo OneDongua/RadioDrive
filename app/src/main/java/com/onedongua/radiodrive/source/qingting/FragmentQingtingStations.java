@@ -34,7 +34,7 @@ import java.util.List;
  * 支持三种模式：分类浏览、推荐、搜索，均支持分页滚动加载。
  */
 public class FragmentQingtingStations extends Fragment implements IFragmentSearchable {
-    private static final String TAG = "FragmentQingtingStations";
+    private static final String TAG = "FragmentQtStations";
 
     public static final int MODE_CATEGORY = 0;
     public static final int MODE_FEATURED = 1;
@@ -161,7 +161,10 @@ public class FragmentQingtingStations extends Fragment implements IFragmentSearc
             @Override
             public void onResult(List<DataRadioStation> stations, int total) {
                 isLoading = false;
-                if (swipeRefreshLayout != null) swipeRefreshLayout.setRefreshing(false);
+                if (swipeRefreshLayout != null) {
+                    mainHandler.post(() ->
+                            swipeRefreshLayout.setRefreshing(false));
+                }
 
                 totalCount = total;
                 if (currentPage == 1) {
@@ -180,7 +183,10 @@ public class FragmentQingtingStations extends Fragment implements IFragmentSearc
             @Override
             public void onError(Exception e) {
                 isLoading = false;
-                if (swipeRefreshLayout != null) swipeRefreshLayout.setRefreshing(false);
+                if (swipeRefreshLayout != null) {
+                    mainHandler.post(() ->
+                            swipeRefreshLayout.setRefreshing(false));
+                }
                 // 加载失败时回退页码，下次滚动可重试
                 if (currentPage > 1) currentPage--;
 
